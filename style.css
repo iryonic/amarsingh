@@ -243,7 +243,7 @@ button {
 }
 .main{
   width: 100%;
-  
+  z-index: -1;
   min-height: 100vh;
  background-image: url(ASC2_BG.png);
  background-position: center;
@@ -278,7 +278,7 @@ button {
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.073);
   position: absolute;
-  z-index: 10;
+  
 }
 
 @keyframes typing {
