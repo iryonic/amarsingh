@@ -1,3 +1,23 @@
+
+
+//loader
+
+const loads = document.querySelector("#loads");
+
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+     document.querySelector("body").style.visibility = "hidden";
+     document.getElementById("loads").style.visibility = "visible";
+  } else {
+     setTimeout(() => {
+        document.getElementById("loads").style.display ="none";
+        document.querySelector("body").style.visibility = "visible";
+     }, 2000)
+  }
+};
+
+
+
 const dropdownBtn = document.querySelectorAll(".dropdown-btn");
 const dropdown = document.querySelectorAll(".dropdown");
 const hamburgerBtn = document.getElementById("hamburger");
@@ -79,3 +99,18 @@ document.addEventListener("keydown", (e) => {
 
 // toggle hamburger menu
 hamburgerBtn.addEventListener("click", toggleHamburger);
+
+
+// SWIPER 
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

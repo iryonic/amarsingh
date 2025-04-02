@@ -7,164 +7,219 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <title>Document</title>
   </head>
   <body>
+     <!-- LOADER -->
+     <div id="loads"><span class="loader"></span></div>
+
+
+
     <div class="whole-wrapper">
-      <section class="sec1">
-        <header id="nav-menu" aria-label="navigation bar">
-          <div class="container">
-            <div class="nav-start">
-              <a class="logo" href="/">
+
+
+  <!-- HEADER NAVABAR -->
+
+
+      <header id="nav-menu" aria-label="navigation bar">
+        <div class="container">
+          <div class="nav-start">
+            <a class="logo" href="/">
+              <img
+                src="Screenshot 2025-04-01 122548.png"
+                class="logoimg"
+                width="135"
+                height="65"
+                alt="Inc Logo"
+              />
+            </a>
+            <nav class="menu">
+              <ul class="menu-bar">
+                <li><a class="nav-link" href="/">About College</a></li>
+                <li>
+                  <button
+                    class="nav-link dropdown-btn"
+                    data-dropdown="dropdown1"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="browse"
+                  >
+                    Admissions
+                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="dropdown1" class="dropdown">
+                    <ul role="menu">
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#best-of-the-day">
+                          <span class="dropdown-link-title"
+                            >Best of the day</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#featured-streams">
+                          <span class="dropdown-link-title"
+                            >Featured Streams</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#subscriptions">
+                          <span class="dropdown-link-title"
+                            >Subscriptions</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#creative-feed">
+                          <span class="dropdown-link-title"
+                            >Creative Feed</span
+                          >
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <button
+                    class="nav-link dropdown-btn"
+                    data-dropdown="dropdown2"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="discover"
+                  >
+                    Departments
+                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="dropdown2" class="dropdown">
+                    <ul role="menu">
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#best-of-the-day">
+                          <span class="dropdown-link-title"
+                            >Best of the day</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#featured-streams">
+                          <span class="dropdown-link-title"
+                            >Featured Streams</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#subscriptions">
+                          <span class="dropdown-link-title"
+                            >Subscriptions</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="#creative-feed">
+                          <span class="dropdown-link-title"
+                            >Creative Feed</span
+                          >
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li><a class="nav-link" href="/">Students Support</a></li>
+                <li><a class="nav-link" href="/">Examinations</a></li>
+                <li><a class="nav-link" href="/">Gallery</a></li>
+                <li><a class="nav-link" href="/">Socials</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="nav-end">
+            <div class="right-container">
+              <a href="#profile">
                 <img
-                  src="Screenshot 2025-04-01 122548.png"
-                  class="logoimg"
-                  width="135"
-                  height="70"
-                  alt="Inc Logo"
+                  src="adminavt.jpg"
+                  width="40"
+                  height="40"
+                  alt="user image"
+                  class="adminavt"
                 />
               </a>
-              <nav class="menu">
-                <ul class="menu-bar">
-                  <li><a class="nav-link" href="/">About College</a></li>
-                  <li>
-                    <button
-                      class="nav-link dropdown-btn"
-                      data-dropdown="dropdown1"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      aria-label="browse"
-                    >
-                      Admissions
-                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
-                    </button>
-                    <div id="dropdown1" class="dropdown">
-                      <ul role="menu">
-                        <li role="menuitem">
-                          <a class="dropdown-link" href="#best-of-the-day">
-                            <span class="dropdown-link-title"
-                              >Best of the day</span
-                            >
-                          </a>
-                        </li>
-                        <li role="menuitem">
-                          <a class="dropdown-link" href="#featured-streams">
-                            <span class="dropdown-link-title"
-                              >Featured Streams</span
-                            >
-                          </a>
-                        </li>
-                        <li role="menuitem">
-                          <a class="dropdown-link" href="#subscriptions">
-                            <span class="dropdown-link-title"
-                              >Subscriptions</span
-                            >
-                          </a>
-                        </li>
-                        <li role="menuitem">
-                          <a class="dropdown-link" href="#creative-feed">
-                            <span class="dropdown-link-title"
-                              >Creative Feed</span
-                            >
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <button
-                      class="nav-link dropdown-btn"
-                      data-dropdown="dropdown2"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                      aria-label="discover"
-                    >
-                      Departments
-                      <i class="bx bx-chevron-down" aria-hidden="true"></i>
-                    </button>
-                    <div id="dropdown2" class="dropdown">
-                      <ul role="menu">
-                        <li role="menuitem">
-                          <a class="dropdown-link" href="#best-of-the-day">
-                            <span class="dropdown-link-title"
-                              >Best of the day</span
-                            >
-                          </a>
-                        </li>
-                        <li role="menuitem">
-                          <a class="dropdown-link" href="#featured-streams">
-                            <span class="dropdown-link-title"
-                              >Featured Streams</span
-                            >
-                          </a>
-                        </li>
-                        <li role="menuitem">
-                          <a class="dropdown-link" href="#subscriptions">
-                            <span class="dropdown-link-title"
-                              >Subscriptions</span
-                            >
-                          </a>
-                        </li>
-                        <li role="menuitem">
-                          <a class="dropdown-link" href="#creative-feed">
-                            <span class="dropdown-link-title"
-                              >Creative Feed</span
-                            >
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-
-                  <li><a class="nav-link" href="/">Students Support</a></li>
-                  <li><a class="nav-link" href="/">Examinations</a></li>
-                  <li><a class="nav-link" href="/">Students Support</a></li>
-                  <li><a class="nav-link" href="/">Examinations</a></li>
-                </ul>
-              </nav>
+              <button class="btn btn-primary">Admin</button>
             </div>
 
-            <div class="nav-end">
-              <div class="right-container">
-                <a href="#profile">
-                  <img
-                    src="adminavt.jpg"
-                    width="40"
-                    height="40"
-                    alt="user image"
-                    class="adminavt"
-                  />
-                </a>
-                <button class="btn btn-primary">Admin</button>
-              </div>
+            <button
+              id="hamburger"
+              aria-label="hamburger"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="bx bx-menu" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </header>
 
-              <button
-                id="hamburger"
-                aria-label="hamburger"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <i class="bx bx-menu" aria-hidden="true"></i>
-              </button>
+      <section class="sec1">
+      
+
+
+                   <!-- HERO SECTION -->
+
+
+        <section class="main swiper mySwiper">
+          <div class="wrapper swiper-wrapper">
+            <div class="slide swiper-slide">
+              <img src="asc3.jpeg" alt="" class="image" />
+              <div class="image-data">
+                <span class="text">Enjoy the finest coffee drinks.</span>
+                <h2>
+                  Enjoy Our Exclusive <br />
+                  Coffee and Cocktails
+                </h2>
+                <a href="#" class="button">About Us</a>
+              </div>
+            </div>
+            <div class="slide swiper-slide">
+              <img src="ASC2_BG.png" alt="" class="image" />
+              <div class="image-data">
+                <span class="text">We really like what we do.</span>
+                <h2>
+                  Coffee Beans with a <br />
+                  Perfect Aroma
+                </h2>
+                <a href="#" class="button">About Us</a>
+              </div>
+            </div>
+            <div class="slide swiper-slide">
+              <img src="asc4.jpg" alt="" class="image" />
+              <div class="image-data">
+                <span class="text">Making Our coffee with lover.</span>
+                <h2>
+                  Alluring and Fragrant <br />
+                  Coffee Aroma
+                </h2>
+                <a href="#" class="button">About Us</a>
+              </div>
             </div>
           </div>
-        </header>
+          <div class="swiper-button-next nav-btn"></div>
+          <div class="swiper-button-prev nav-btn"></div>
+          <div class="swiper-pagination"></div>
+        </section>
 
-       
-        <main class="main">
-          
-          <h1 class="title">AMAR SINGH COLLEGE</h1>
-          <h3 class="subtitle">We Aim To Deliver</h3>
-        </main>
-        <main class="abovepack"></main>
-   
+
+        <!-- <main class="abovepack"></main> -->
       </section>
       <section class="sec2"></section>
       <section class="sec3"></section>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
