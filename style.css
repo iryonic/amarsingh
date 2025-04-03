@@ -87,7 +87,8 @@ body::-webkit-scrollbar-thumb {
     content: '';
     width: 100%;
     height: 100%;
-    background: #0b5ea1;
+    /* background: #0b5ea1; */
+    background: var(--primary-color);
     animation: bxSpin 0.5s linear infinite;
     position: absolute;
     top: 0;
@@ -160,7 +161,7 @@ button {
 
 .btn {
   display: block;
-  background-color: rgb(112, 150, 254);
+  background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
   padding: 0.5rem 1.4rem;
@@ -200,7 +201,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 2rem;
+  column-gap: 1.5rem;
   height: 60px;
 
 }
@@ -300,7 +301,7 @@ button {
 .right-container {
   display: flex;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: .4rem;
 }
 
  
@@ -308,6 +309,8 @@ button {
 .right-container .adminavt{
   border-radius: 50%;
   position: relative;
+  width: 50px;
+  height: 50px;
  
 
 
@@ -327,23 +330,10 @@ button {
   display: none;
   padding: 0.1rem;
   margin-left: 2px;
-  font-size: 1.9rem;
+  font-size: 2.2rem;
 }
 
-.title {
-  
-  width: fit-content;
-  height: 100px;
- 
-  font-size: 4rem;
-  color: rgb(255, 250, 250);
-  /* text-shadow: 1px 1px 1px black; */
-  white-space: nowrap;
-  overflow: hidden;
-    display: inline-block;
-    line-height: -30px;
-  animation: typing 3.5s, blink-caret 0.75s step-end infinite;
-}
+
 
 
 /* SECTION 1 */
@@ -361,12 +351,14 @@ button {
 .main {
   height: 100vh;
   width: 100%;
+  
 }
 .wrapper,
 .slide {
   position: relative;
   width: 100%;
   height: 100%;
+  
 }
 .slide {
   overflow: hidden;
@@ -390,18 +382,60 @@ button {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 100%;
+  
+  width:  78%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all ease none ;
   z-index: 100;
+  background: rgba(255, 255, 255, 0.278);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 8.5px );
+-webkit-backdrop-filter: blur( 8.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.slide .image-data:hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  
+  width:  78%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all ease none ;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0);
+
+backdrop-filter: blur( 0px );
+-webkit-backdrop-filter: blur( 8.5px );
+
+
 }
 .image-data span.text {
   font-size: 14px;
   font-weight: 400;
   color: #fff;
 }
-.image-data h2 {
-  font-size: 45px;
+.image-data .title {
+  font-size: 5vh;
   font-weight: 600;
-  color: #fff;
+  
+  white-space: nowrap;
+  overflow: hidden;
+   text-shadow: 3px 1px 1px solid rgb(23, 23, 23);
+    color: white;
+  animation: typing 4s, blink-caret 0.75s ease infinite;
+ 
+
 }
 a.button {
   display: inline-block;
@@ -411,11 +445,11 @@ a.button {
   background: #fff;
   text-decoration: none;
   margin-top: 25px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 a.button:hover {
   color: #fff;
-  background-color: #c87e4f;
+  background-color: var(--primary-color);
 }
 /* swiper button css */
 .nav-btn {
@@ -429,11 +463,13 @@ a.button:hover {
   background: rgba(255, 255, 255, 0.534);
 }
 .swiper-button-next {
-  right: 50px;
+  left: 120px;
+  top: 690px;
  
 }
 .swiper-button-prev {
   left: 50px;
+  top: 690px;
 }
 .nav-btn::before,
 .nav-btn::after {
@@ -452,14 +488,7 @@ a.button:hover {
   border: 2px solid #fff;
   background-color: var(--primary-color)
 }
-@media screen and (max-width: 768px) {
-  .nav-btn {
-    visibility: hidden;
-  }
-  .swiper-pagination-bullet {
-    visibility: visible;
-  }
-}
+
 
 @keyframes typing {
   from {
@@ -553,6 +582,26 @@ a.button:hover {
   }
  
 }
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .nav-btn {
+    visibility: hidden;
+  }
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+  .image-data .title {
+    font-size: 3.5vh;}
+ 
+}
+
+
+
+
 @media (max-width: 450px) {
   /* .right-container .adminavt{
     right: 120px;
