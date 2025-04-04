@@ -114,3 +114,32 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+//new swiper
+new Swiper('.card-wrapper', {
+  loop: true,
+  spaceBetween: 30,
+  // Pagination bullets
+  pagination: {
+      el: '.swiper-pagination2',
+      clickable: true,
+      dynamicBullets: true
+  },
+  // Navigation arrows
+  navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+  },
+  // Responsive breakpoints
+  breakpoints: {
+      0: {
+          slidesPerView: 1
+      },
+      768: {
+          slidesPerView: 2
+      },
+      1024: {
+          slidesPerView: 3
+      }
+  }
+});
