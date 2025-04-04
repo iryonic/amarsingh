@@ -105,6 +105,11 @@ hamburgerBtn.addEventListener("click", toggleHamburger);
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   loop: true,
+
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -143,3 +148,93 @@ new Swiper('.card-wrapper', {
       }
   }
 });
+
+
+//notification 
+const notifications = [
+  {
+    date: "2025-04-04",
+    title: "Mid-Term Exam Dates Announced",
+    desc: "Exams will begin on April 10. Check timetable in the academic portal."
+  },
+  {
+    date: "2025-04-02",
+    title: "AI & ML Course Launched",
+    desc: "New elective available for 5th semester students. Apply before April 8."
+  },
+  {
+    date: "2025-04-01",
+    title: "Library Timings Extended",
+    desc: "Library open till 8 PM from Mon–Sat to help with exam prep."
+  },
+  {
+    date: "2025-03-28",
+    title: "Placement Drive: Infosys",
+    desc: "Infosys placement drive on April 5. Register by March 30."
+  },
+  {
+    date: "2025-03-15",
+    title: "Seminar on Cybersecurity",
+    desc: "Guest lecture on April 2 by industry expert. Limited seats!"
+  }
+];
+
+const container = document.getElementById("notifications-list");
+const toggleBtn = document.getElementById("toggle-btn");
+const filter = document.getElementById("month-filter");
+
+let showAll = false;
+
+function formatDate(dateStr) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(dateStr).toLocaleDateString(undefined, options);
+}
+
+function renderNotifications(filtered = notifications) {
+  container.innerHTML = "";
+  let toShow = showAll ? filtered : filtered.slice(0, 3);
+  toShow.forEach(notif => {
+    const el = document.createElement("div");
+    el.className = "notification";
+    el.innerHTML = `
+      <div class="date">${formatDate(notif.date)}</div>
+      <div class="title">${notif.title}</div>
+      <div class="desc">${notif.desc}</div>
+    `;
+    container.appendChild(el);
+  });
+  animateOnScroll();
+  toggleBtn.style.display = filtered.length <= 3 ? "none" : "block";
+  toggleBtn.innerText = showAll ? "Show Less" : "Show More";
+}
+
+toggleBtn.addEventListener("click", () => {
+  showAll = !showAll;
+  applyFilter();
+});
+
+filter.addEventListener("change", applyFilter);
+
+function applyFilter() {
+  const val = filter.value;
+  const filtered = val === "all"
+    ? notifications
+    : notifications.filter(n => n.date.startsWith(val));
+  renderNotifications(filtered);
+}
+
+function animateOnScroll() {
+  const observers = document.querySelectorAll(".notification");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observers.forEach(el => observer.observe(el));
+}
+
+// Initial render
+applyFilter();
