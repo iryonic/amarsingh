@@ -152,7 +152,7 @@ button {
   background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
-  padding: 0.5rem 1.4rem;
+  padding: 0.3rem 1rem;
   font-size: 1rem;
   font-weight: 500;
   border-radius: 5px;
@@ -291,17 +291,12 @@ button {
   position: relative;
   font-size: x-large;
   top: 10px;
+  left: 20px;
   color: var(--primary-color);
   width: 50px;
   height: 50px;
 }
-.adminavt::after {
-  content: "Admin Login";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: red;
-}
+
 
 #hamburger {
   display: none;
@@ -450,10 +445,12 @@ a.button:hover {
   width: 12px;
   background-color: #fff;
   visibility: hidden;
+  z-index: -1;
 }
 .swiper-pagination-bullet-active {
   border: 2px solid #fff;
   background-color: var(--primary-color);
+  z-index: -1;
 }
 
 @keyframes typing {
@@ -472,29 +469,17 @@ a.button:hover {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: var(--primary-color);
   }
 }
 
 /* SECTION 2ND */
 .sec2 {
-  min-height: 55vh;
+  min-height: 30vh;
   width: 100%;
-  margin: 0 auto;
+  margin: 30px auto;
  
   
-}
-.secheading{
-  margin:10px ;
-  white-space: nowrap;
-  padding: 20px 0;
-  color: #2b72fb;
-  border-bottom: 2px solid var(--primary-color);
-  font-size: x-large;
-  font-weight: bolder;
-  animation: var(--t-animation);
-  /* border: 2px solid rgb(0, 13, 255); */
-  display: inline-block;
 }
 
 .card-wrapper {
@@ -627,10 +612,10 @@ position: absolute;
 /* SECTION  3 */
 
 .sec3 {
-  min-height: 50vh;
+  min-height: 20vh;
   width: 100%;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: 50px auto;
+
 
 }
 .section-title {
@@ -691,6 +676,8 @@ ul.notification-list {
   padding: 0.75rem 1rem;
   border-radius: 10px;
   transition: background 0.3s ease;
+  border: .5px solid var(--primary-color);
+  /* box-shadow: var(--shadow); */
   display: flex;
   flex-direction: column;
 }
