@@ -12,7 +12,7 @@ document.onreadystatechange = function () {
      setTimeout(() => {
         document.getElementById("loads").style.display ="none";
         document.querySelector("body").style.visibility = "visible";
-     }, 2000)
+     }, 3000)
   }
 };
 
@@ -151,90 +151,76 @@ new Swiper('.card-wrapper', {
 
 
 //notification 
-const notifications = [
-  {
-    date: "2025-04-04",
-    title: "Mid-Term Exam Dates Announced",
-    desc: "Exams will begin on April 10. Check timetable in the academic portal."
-  },
-  {
-    date: "2025-04-02",
-    title: "AI & ML Course Launched",
-    desc: "New elective available for 5th semester students. Apply before April 8."
-  },
-  {
-    date: "2025-04-01",
-    title: "Library Timings Extended",
-    desc: "Library open till 8 PM from Mon–Sat to help with exam prep."
-  },
-  {
-    date: "2025-03-28",
-    title: "Placement Drive: Infosys",
-    desc: "Infosys placement drive on April 5. Register by March 30."
-  },
-  {
-    date: "2025-03-15",
-    title: "Seminar on Cybersecurity",
-    desc: "Guest lecture on April 2 by industry expert. Limited seats!"
-  }
-];
+const list = document.getElementById("notificationList");
+    const items = Array.from(list.children);
+    const scrollUp = document.getElementById("scrollUp");
+    const scrollDown = document.getElementById("scrollDown");
+    const monthFilter = document.getElementById("monthFilter");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const searchInput = document.getElementById("searchInput");
 
-const container = document.getElementById("notifications-list");
-const toggleBtn = document.getElementById("toggle-btn");
-const filter = document.getElementById("month-filter");
+    let scrollInterval;
+    let topIndex = 0;
 
-let showAll = false;
+    function getFilteredItems() {
+      const month = monthFilter.value;
+      const category = categoryFilter.value.toLowerCase();
+      const keyword = searchInput.value.toLowerCase();
 
-function formatDate(dateStr) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(dateStr).toLocaleDateString(undefined, options);
-}
+      return items.filter(item => {
+        const itemMonth = item.getAttribute("data-month");
+        const itemCategory = item.getAttribute("data-category").toLowerCase();
+        const text = item.innerText.toLowerCase();
 
-function renderNotifications(filtered = notifications) {
-  container.innerHTML = "";
-  let toShow = showAll ? filtered : filtered.slice(0, 3);
-  toShow.forEach(notif => {
-    const el = document.createElement("div");
-    el.className = "notification";
-    el.innerHTML = `
-      <div class="date">${formatDate(notif.date)}</div>
-      <div class="title">${notif.title}</div>
-      <div class="desc">${notif.desc}</div>
-    `;
-    container.appendChild(el);
-  });
-  animateOnScroll();
-  toggleBtn.style.display = filtered.length <= 3 ? "none" : "block";
-  toggleBtn.innerText = showAll ? "Show Less" : "Show More";
-}
+        return (
+          (month === "" || itemMonth === month) &&
+          (category === "" || itemCategory === category) &&
+          (keyword === "" || text.includes(keyword))
+        );
+      });
+    }
 
-toggleBtn.addEventListener("click", () => {
-  showAll = !showAll;
-  applyFilter();
-});
+    function renderList() {
+      const filtered = getFilteredItems();
+      list.innerHTML = "";
+      filtered.forEach(item => list.appendChild(item.cloneNode(true)));
+    }
 
-filter.addEventListener("change", applyFilter);
+    function autoScroll() {
+      clearInterval(scrollInterval);
+      scrollInterval = setInterval(() => {
+        const total = list.children.length;
+        if (topIndex < total - 1) topIndex++;
+        else topIndex = 0;
 
-function applyFilter() {
-  const val = filter.value;
-  const filtered = val === "all"
-    ? notifications
-    : notifications.filter(n => n.date.startsWith(val));
-  renderNotifications(filtered);
-}
+        const topEl = list.children[topIndex];
+        list.style.transition = "transform 0.6s ease-in-out";
+        list.style.transform = `translateY(-${topEl.offsetTop}px)`;
+      }, 3000);
+    }
 
-function animateOnScroll() {
-  const observers = document.querySelectorAll(".notification");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.1 });
+    function manualScroll(direction) {
+      clearInterval(scrollInterval);
+      const total = list.children.length;
+      if (direction === "up" && topIndex > 0) topIndex--;
+      if (direction === "down" && topIndex < total - 1) topIndex++;
 
-  observers.forEach(el => observer.observe(el));
-}
+      const topEl = list.children[topIndex];
+      list.style.transition = "transform 0.5s ease-in-out";
+      list.style.transform = `translateY(-${topEl.offsetTop}px)`;
 
-// Initial render
-applyFilter();
+      setTimeout(autoScroll, 4000);
+    }
+
+    scrollUp.addEventListener("click", () => manualScroll("up"));
+    scrollDown.addEventListener("click", () => manualScroll("down"));
+
+    [monthFilter, categoryFilter, searchInput].forEach(input =>
+      input.addEventListener("input", () => {
+        topIndex = 0;
+        renderList();
+      })
+    );
+
+    renderList();
+    autoScroll();

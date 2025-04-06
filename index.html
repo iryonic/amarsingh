@@ -171,7 +171,7 @@
         <section class="main swiper mySwiper">
           <div class="wrapper swiper-wrapper">
             <div class="slide swiper-slide">
-              <img src="zhanhui-li-1iuxWsIZ6ko-unsplash.jpg" alt="" class="image" />
+              <img src="z3.jpg" alt="" class="image" />
               <div class="image-data">
                 <span class="text">Enjoy the finest coffee drinks.</span>
                 <h2 class="title"> 
@@ -213,23 +213,53 @@
 <!-- SECTION 3 STARTS  -->
 
 <section class="sec3">
-  <div class="notif-container">
-    <h2 class="section-title">📢 Latest College Notifications</h2>
-
-    <div class="filter">
-      <select id="month-filter">
-        <option value="all">All Months</option>
-        <option value="2025-04">April 2025</option>
-        <option value="2025-03">March 2025</option>
+  <h2 class="section-title">📢 Latest College Notifications</h2>
+   <section class="notifications-section">
+    <div class="filters">
+      <select id="monthFilter">
+        <option value="">All Months</option>
+        <option value="04">April</option>
+        <option value="03">March</option>
       </select>
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Exam">Exam</option>
+        <option value="Event">Event</option>
+        <option value="Holiday">Holiday</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search..." />
     </div>
 
-    <div id="notifications-list">
-      <!-- Notifications will be rendered here -->
+    <div class="scroll-area">
+      <ul class="notification-list" id="notificationList">
+        <li class="notification-item" data-month="04" data-category="Exam">
+          <a href="link1.html">Semester 2 Internal Exam Dates Announced</a>
+          <span class="notification-date">2025-04-05 10:00 AM</span>
+        </li>
+        <li class="notification-item" data-month="04" data-category="Event">
+          <a href="link2.html">Annual Tech Fest This Weekend</a>
+          <span class="notification-date">2025-04-04 02:15 PM</span>
+        </li>
+        <li class="notification-item" data-month="03" data-category="Holiday">
+          <a href="link3.html">Holi Holiday Declared on 8th March</a>
+          <span class="notification-date">2025-03-07 05:00 PM</span>
+        </li>
+        <li class="notification-item" data-month="04" data-category="Exam">
+          <a href="link4.html">Assignment Submission Last Date</a>
+          <span class="notification-date">2025-04-01 11:45 AM</span>
+        </li>
+        <li class="notification-item" data-month="03" data-category="Event">
+          <a href="link5.html">Workshop on AI & Web Dev</a>
+          <span class="notification-date">2025-03-28 09:30 AM</span>
+        </li>
+      </ul>
     </div>
 
-    <button id="toggle-btn" class="show-btn">Show More</button>
-  </div>
+    <div class="controls">
+      <button id="scrollUp">Up</button>
+      <button id="scrollDown">Down</button>
+    </div>
+  </section>
   <!-- SECTION 3 ENDS  -->
 </section>
 
@@ -243,7 +273,7 @@
       <ul class="card-list swiper-wrapper">
         <li class="card-item swiper-slide">
           <a href="#" class="card-link">
-            <img src="zhanhui-li-1iuxWsIZ6ko-unsplash.jpg" alt="Card Image" class="card-image">
+            <img src="z3.jpg" alt="Card Image" class="card-image">
             <p class="badge badge-designer">Designer</p>
             <h2 class="card-title">Lorem ipsum dolor sit explicabo adipisicing elit</h2>
             <button class="card-button material-symbols-rounded"><i class="fa-solid fa-arrow-right"></i></button>
@@ -251,7 +281,7 @@
         </li>
         <li class="card-item swiper-slide">
           <a href="#" class="card-link">
-            <img src="zhanhui-li-1iuxWsIZ6ko-unsplash.jpg" alt="Card Image" class="card-image">
+            <img src="z3.jpg" alt="Card Image" class="card-image">
             <p class="badge badge-developer">Developer</p>
             <h2 class="card-title">Lorem ipsum dolor sit explicabo adipisicing elit</h2>
             <button class="card-button material-symbols-rounded"><i class="fa-solid fa-arrow-right"></i></button>
@@ -259,7 +289,7 @@
         </li>
         <li class="card-item swiper-slide">
           <a href="#" class="card-link">
-            <img src="zhanhui-li-1iuxWsIZ6ko-unsplash.jpg" alt="Card Image" class="card-image">
+            <img src="z3.jpg" alt="Card Image" class="card-image">
             <p class="badge badge-marketer">Marketer</p>
             <h2 class="card-title">Lorem ipsum dolor sit explicabo adipisicing elit</h2>
             <button class="card-button material-symbols-rounded"><i class="fa-solid fa-arrow-right"></i></button>
@@ -267,7 +297,7 @@
         </li>
         <li class="card-item swiper-slide">
           <a href="#" class="card-link">
-            <img src="zhanhui-li-1iuxWsIZ6ko-unsplash.jpg" alt="Card Image" class="card-image">
+            <img src="z3.jpg" alt="Card Image" class="card-image">
             <p class="badge badge-gamer">Gamer</p>
             <h2 class="card-title">Lorem ipsum dolor sit explicabo adipisicing elit</h2>
             <button class="card-button material-symbols-rounded"><i class="fa-solid fa-arrow-right"></i></button>
@@ -275,7 +305,7 @@
         </li>
         <li class="card-item swiper-slide">
           <a href="#" class="card-link">
-            <img src="zhanhui-li-1iuxWsIZ6ko-unsplash.jpg" alt="Card Image" class="card-image">
+            <img src="z3.jpg" alt="Card Image" class="card-image">
             <p class="badge badge-editor">Editor</p>
             <h2 class="card-title">Lorem ipsum dolor sit explicabo adipisicing elit</h2>
             <button class="card-button material-symbols-rounded"><i class="fa-solid fa-arrow-right"></i></button>
