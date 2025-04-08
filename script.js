@@ -18,6 +18,22 @@ document.onreadystatechange = function () {
 
 
 
+const goTopBtn = document.getElementById("goTopBtn");
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    goTopBtn.classList.add("show");
+  } else {
+    goTopBtn.classList.remove("show");
+  }
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+
 const dropdownBtn = document.querySelectorAll(".dropdown-btn");
 const dropdown = document.querySelectorAll(".dropdown");
 const hamburgerBtn = document.getElementById("hamburger");
@@ -196,7 +212,7 @@ const list = document.getElementById("notificationList");
         const topEl = list.children[topIndex];
         list.style.transition = "transform 0.6s ease-in-out";
         list.style.transform = `translateY(-${topEl.offsetTop}px)`;
-      }, 3000);
+      }, 2000);
     }
 
     function manualScroll(direction) {
@@ -209,7 +225,7 @@ const list = document.getElementById("notificationList");
       list.style.transition = "transform 0.5s ease-in-out";
       list.style.transform = `translateY(-${topEl.offsetTop}px)`;
 
-      setTimeout(autoScroll, 4000);
+      setTimeout(autoScroll, 2000);
     }
 
     scrollUp.addEventListener("click", () => manualScroll("up"));
@@ -287,4 +303,20 @@ const list = document.getElementById("notificationList");
         e.preventDefault();
       }
       lastTap = currentTime;
+    });
+
+
+    // ACCORDIAN SEC
+
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const openItem = document.querySelector('.accordion-item.active');
+
+        if (openItem && openItem !== item) {
+          openItem.classList.remove('active');
+        }
+
+        item.classList.toggle('active');
+      });
     });
