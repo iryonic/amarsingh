@@ -287,15 +287,15 @@ button {
   column-gap: 0.4rem;
 }
 
-.right-container .fa-user {
+.right-container .useravt {
   border-radius: 50%;
   position: relative;
   font-size: x-large;
-  top: 10px;
-  left: 20px;
+  top: -3px;
+left: -3px;
+
   color: var(--primary-color);
-  width: 50px;
-  height: 50px;
+
 }
 
 
@@ -305,7 +305,7 @@ button {
   margin-left: 2px;
   font-size: 2.2rem;
 }
-.bx{
+.bx-menu{
   color: var(--primary-color);
 }
 
@@ -514,7 +514,7 @@ a.button:hover {
 
 /* SECTION 2ND */
 .sec2 {
-  min-height: 30vh;
+  min-height: 20vh;
   width: 100%;
   margin: 30px auto;
  
@@ -524,7 +524,7 @@ a.button:hover {
 .card-wrapper {
 
   max-width: 100%;
- min-height: 70vh;
+ min-height: 20vh;
   padding: 20px 10px;
   margin-bottom: 10px;
  overflow: hidden;
@@ -644,9 +644,15 @@ a.button:hover {
   border: 1px solid var(--primary-color);
 }
 .swiper-pagination2{
-position: absolute;
+position: relative;
 }
 
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
 
 /* SECTION  3 */
 
