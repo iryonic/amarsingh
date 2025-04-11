@@ -856,7 +856,7 @@ ul.notification-list {
 
  .accordion-section {
       max-width: 100%;
-      margin: 0 auto;
+      margin: 50px auto;
       background: #0e1a2b;
       /* border-radius: 12px; */
       overflow: hidden;
@@ -871,7 +871,7 @@ ul.notification-list {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 1.8rem ;
+      font-size: 1.6rem ;
       padding: 1rem;
       cursor: pointer;
       background: white;
@@ -1028,6 +1028,68 @@ ul.notification-list {
 
 
 
+    /* ABOUT US */
+
+
+
+
+.about-container {
+  padding: 1rem;
+  width: 98vw;
+  margin: 100px auto;
+}
+
+.about-box {
+  margin-bottom: 2rem;
+}
+
+.blue-heading {
+  color: #0066ff;
+  margin-bottom: 0.5rem;
+}
+
+/* Principal Section */
+.principal-section {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.principal-photo {
+ 
+  text-align: center;
+}
+
+.principal-photo img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.principal-photo h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.principal-photo .label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.principal-message {
+  
+  min-width: 260px;
+}
+
+
+
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
@@ -1179,6 +1241,7 @@ ul.notification-list {
   .footer-col button {
     width: 100%;
   }
+ 
 }
 
 
@@ -1192,5 +1255,9 @@ ul.notification-list {
   *{
     font-size: small;
   }
+  .bx-menu{
+    font-size: larger;
+  }
+
 }
 

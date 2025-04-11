@@ -1,16 +1,15 @@
-'use strict';
 
 //loader
 
-const loads = document.querySelector("#loads");
+const loadOut = document.querySelector("#loads");
 
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
      document.querySelector("body").style.visibility = "hidden";
-     document.getElementById("loads").style.visibility = "visible";
+     loadOut.style.visibility = "visible";
   } else {
      setTimeout(() => {
-        document.getElementById("loads").style.display ="none";
+        loadOut.style.display ="none";
         document.querySelector("body").style.visibility = "visible";
      }, 3000)
   }
@@ -166,144 +165,10 @@ new Swiper('.card-wrapper', {
 });
 
 
-//notification 
-const list = document.getElementById("notificationList");
-    const items = Array.from(list.children);
-    const scrollUp = document.getElementById("scrollUp");
-    const scrollDown = document.getElementById("scrollDown");
-    const monthFilter = document.getElementById("monthFilter");
-    const categoryFilter = document.getElementById("categoryFilter");
-    const searchInput = document.getElementById("searchInput");
-
-    let scrollInterval;
-    let topIndex = 0;
-
-    function getFilteredItems() {
-      const month = monthFilter.value;
-      const category = categoryFilter.value.toLowerCase();
-      const keyword = searchInput.value.toLowerCase();
-
-      return items.filter(item => {
-        const itemMonth = item.getAttribute("data-month");
-        const itemCategory = item.getAttribute("data-category").toLowerCase();
-        const text = item.innerText.toLowerCase();
-
-        return (
-          (month === "" || itemMonth === month) &&
-          (category === "" || itemCategory === category) &&
-          (keyword === "" || text.includes(keyword))
-        );
-      });
-    }
-
-    function renderList() {
-      const filtered = getFilteredItems();
-      list.innerHTML = "";
-      filtered.forEach(item => list.appendChild(item.cloneNode(true)));
-    }
-
-    function autoScroll() {
-      clearInterval(scrollInterval);
-      scrollInterval = setInterval(() => {
-        const total = list.children.length;
-        if (topIndex < total - 1) topIndex++;
-        else topIndex = 0;
-
-        const topEl = list.children[topIndex];
-        list.style.transition = "transform 0.6s ease-in-out";
-        list.style.transform = `translateY(-${topEl.offsetTop}px)`;
-      }, 2000);
-    }
-
-    function manualScroll(direction) {
-      clearInterval(scrollInterval);
-      const total = list.children.length;
-      if (direction === "up" && topIndex > 0) topIndex--;
-      if (direction === "down" && topIndex < total - 1) topIndex++;
-
-      const topEl = list.children[topIndex];
-      list.style.transition = "transform 0.5s ease-in-out";
-      list.style.transform = `translateY(-${topEl.offsetTop}px)`;
-
-      setTimeout(autoScroll, 2000);
-    }
-
-    scrollUp.addEventListener("click", () => manualScroll("up"));
-    scrollDown.addEventListener("click", () => manualScroll("down"));
-
-    [monthFilter, categoryFilter, searchInput].forEach(input =>
-      input.addEventListener("input", () => {
-        topIndex = 0;
-        renderList();
-      })
-    );
-
-    renderList();
-    autoScroll();
 
 
 
-    //Gallery Section
-
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImg');
-    const zoomInBtn = document.getElementById('zoomIn');
-    const zoomOutBtn = document.getElementById('zoomOut');
-    const downloadBtn = document.getElementById('download');
-    const closeModal = document.getElementById('closeModal');
-
-    let scale = 1;
-    const maxScale = 3;
-    const minScale = 1;
-
-    document.querySelectorAll('.gallery-item img').forEach(img => {
-      img.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = img.src;
-        scale = 1;
-        modalImg.style.transform = `scale(${scale})`;
-      });
-    });
-
-    closeModal.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    zoomInBtn.addEventListener('click', () => {
-      if (scale < maxScale) {
-        scale += 0.25;
-        modalImg.style.transform = `scale(${scale})`;
-      }
-    });
-
-    zoomOutBtn.addEventListener('click', () => {
-      if (scale > minScale) {
-        scale -= 0.25;
-        modalImg.style.transform = `scale(${scale})`;
-      }
-    });
-
-    downloadBtn.addEventListener('click', () => {
-      const link = document.createElement('a');
-      link.href = modalImg.src;
-      link.download = 'image.jpg';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    });
-
-    // Double tap zoom for touch
-    let lastTap = 0;
-    modalImg.addEventListener('touchend', (e) => {
-      const currentTime = new Date().getTime();
-      const tapLength = currentTime - lastTap;
-      if (tapLength < 300 && tapLength > 0) {
-        scale = (scale === 1) ? 2 : 1;
-        modalImg.style.transform = `scale(${scale})`;
-        e.preventDefault();
-      }
-      lastTap = currentTime;
-    });
+   
 
 
     // ACCORDIAN SEC
@@ -320,3 +185,17 @@ const list = document.getElementById("notificationList");
         item.classList.toggle('active');
       });
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
