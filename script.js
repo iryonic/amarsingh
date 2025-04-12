@@ -7,15 +7,18 @@ document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
      document.querySelector("body").style.visibility = "hidden";
      loadOut.style.visibility = "visible";
+     document.body.style.overflowY = "hidden";
   } else {
      setTimeout(() => {
         loadOut.style.display ="none";
         document.querySelector("body").style.visibility = "visible";
+        document.body.style.overflowY = "scroll";
      }, 3000)
   }
 };
 
 
+// GO TO TOP
 
 const goTopBtn = document.getElementById("goTopBtn");
 

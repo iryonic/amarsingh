@@ -177,10 +177,11 @@ button {
 #nav-menu {
   border-bottom: var(--border);
   position: fixed;
-  width: 98vw;
+  width: 100vw;
   margin: 0 auto;
   background-color: #fff;
   z-index: 4;
+  left: -1px;
 }
 
 .container {
@@ -1087,6 +1088,150 @@ ul.notification-list {
   
   min-width: 260px;
 }
+
+
+
+/* OUR HISTORY */
+
+/* History Page Layout */
+
+
+/* ========== HERO SECTION ========== */
+.history-hero {
+  background: linear-gradient(to right, #0066ff, #4b92ff);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 4rem 2rem;
+  margin-top: 20px ;
+  text-align: center;
+}
+
+.history-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.history-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+
+
+@media (max-width: 768px) {
+  .history-hero h1 {
+    font-size: 2rem;
+  }
+
+  .history-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ========== HORIZONTAL TIMELINE ========== */
+.horizontal-timeline {
+  overflow-x: auto;
+  white-space: nowrap;
+  background: #f5f7ff;
+  padding: 2rem 1rem;
+}
+
+.timeline-wrapper {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  min-width: 600px;
+}
+
+.timeline-card {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.timeline-card .year {
+  font-size: 1.5rem;
+  color: #0066ff;
+  font-weight: bold;
+}
+
+.time-val{
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .timeline-wrapper {
+    min-width: 100%;
+    overflow-x: scroll;
+  }
+
+  .timeline-card {
+    min-width: 140px;
+    padding: 1rem;
+  }
+  .time-val{
+    font-size: .5rem;
+  }
+}
+
+/* ========== ERA BANNER SECTIONS ========== */
+.history-era {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 6rem 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history-era::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.era-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.era-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.era-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .era-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .era-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-era {
+    padding: 4rem 1rem;
+  }
+}
+
 
 
 
