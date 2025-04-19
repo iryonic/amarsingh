@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link href=https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css rel=stylesheet>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css>
+<link rel=stylesheet href=styles.css>
+<title>Document</title>
+</head>
+<body>
+<div id=loads><span class=loader></span></div>
+<div class=whole-wrapper>
+<header id=nav-menu aria-label="navigation bar">
+<div class=container>
+<div class=nav-start>
+<a class=logo href=/ >
+<img src="Screenshot 2025-04-01 122548.png" class=logoimg width=135 height=65 alt="Inc Logo">
+</a>
+<nav class=menu>
+<ul class=menu-bar>
+<li><a class=nav-link href=/ >About College</a></li>
+<li>
+<button class="nav-link dropdown-btn" data-dropdown=dropdown1 aria-haspopup=true aria-expanded=false aria-label=browse>
+Admissions
+<i class="bx bx-chevron-down" aria-hidden=true></i>
+</button>
+<div id=dropdown1 class=dropdown>
+<ul role=menu>
+<li role=menuitem>
+<a class=dropdown-link href=#best-of-the-day>
+<span class=dropdown-link-title>Best of the day</span>
+</a>
+</li>
+<li role=menuitem>
+<a class=dropdown-link href=#featured-streams>
+<span class=dropdown-link-title>Featured Streams</span>
+</a>
+</li>
+<li role=menuitem>
+<a class=dropdown-link href=#subscriptions>
+<span class=dropdown-link-title>Subscriptions</span>
+</a>
+</li>
+<li role=menuitem>
+<a class=dropdown-link href=#creative-feed>
+<span class=dropdown-link-title>Creative Feed</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<button class="nav-link dropdown-btn" data-dropdown=dropdown2 aria-haspopup=true aria-expanded=false aria-label=discover>
+Departments
+<i class="bx bx-chevron-down" aria-hidden=true></i>
+</button>
+<div id=dropdown2 class=dropdown>
+<ul role=menu>
+<li role=menuitem>
+<a class=dropdown-link href=#best-of-the-day>
+<span class=dropdown-link-title>Best of the day</span>
+</a>
+</li>
+<li role=menuitem>
+<a class=dropdown-link href=#featured-streams>
+<span class=dropdown-link-title>Featured Streams</span>
+</a>
+</li>
+<li role=menuitem>
+<a class=dropdown-link href=#subscriptions>
+<span class=dropdown-link-title>Subscriptions</span>
+</a>
+</li>
+<li role=menuitem>
+<a class=dropdown-link href=#creative-feed>
+<span class=dropdown-link-title>Creative Feed</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li><a class=nav-link href=/ >Students Support</a></li>
+<li><a class=nav-link href=/ >Examinations</a></li>
+<li><a class=nav-link href=/ >Gallery</a></li>
+<li><a class=nav-link href=/ >Socials</a></li>
+</ul>
+</nav>
+</div>
+<div class=nav-end>
+<div class=right-container>
+<a href=#profile class="useravt">
+<i class="fa-solid fa-user"></i>
+</a>
+<button class="btn btn-primary">Admin</button>
+</div>
+<button id=hamburger aria-label=hamburger aria-haspopup=true aria-expanded=false>
+<i class="bx bx-menu" aria-hidden=true></i>
+</button>
+</div>
+</div>
+</header>
+<section class=sec1>
+<section class="main swiper mySwiper">
+<div class="wrapper swiper-wrapper">
+<div class="slide swiper-slide">
+<img src=z3.jpg alt="Campus View" class=image>
+<div class=image-data>
+<span class=text>Empowering Students Through Excellence</span>
+<h2 class=title>Amar Singh College</h2>
+<a href=#about class=button>Learn More</a>
+</div>
+</div>
+<div class="slide swiper-slide">
+<img src=asc3.jpeg alt="College Library" class=image>
+<div class=image-data>
+<span class=text>Modern Facilities & Enriched Learning Environment</span>
+<h2 class=title>Shaping the Future</h2>
+<a href=#facilities class=button>Explore Facilities</a>
+</div>
+</div>
+<div class="slide swiper-slide">
+<img src=asc4.jpg alt="Seminar Event" class=image>
+<div class=image-data>
+<span class=text>Fostering Innovation, Research & Growth</span>
+<h2 class=title>Where Ideas Take Flight</h2>
+<a href=#research class=button>Discover More</a>
+</div>
+</div>
+</div>
+<div class="swiper-button-next nav-btn"></div>
+<div class="swiper-button-prev nav-btn"></div>
+<div class=swiper-pagination></div>
+</section>
+</section>
+<button onclick=scrollToTop() id=goTopBtn title="Go to top">
+<i class="fa-solid fa-arrow-up"></i>
+</button>
+<section class=sec3>
+<h2 class=section-title>📢 Latest College Notifications</h2>
+<section class=notifications-section>
+<div class=filters>
+<select id=monthFilter>
+<option value="">All Months</option>
+<option value=04>April</option>
+<option value=03>March</option>
+</select>
+<select id=categoryFilter>
+<option value="">All Categories</option>
+<option value=Exam>Exam</option>
+<option value=Event>Event</option>
+<option value=Holiday>Holiday</option>
+</select>
+<input id=searchInput placeholder=Search...>
+</div>
+<div class=scroll-area>
+<ul class=notification-list id=notificationList>
+<li class=notification-item data-month=04 data-category=Exam>
+<a href=link1.html>Semester 2 Internal Exam Dates Announced</a>
+<span class=notification-date>2025-04-05 10:00 AM</span>
+</li>
+<li class=notification-item data-month=04 data-category=Event>
+<a href=link2.html>Annual Tech Fest This Weekend</a>
+<span class=notification-date>2025-04-04 02:15 PM</span>
+</li>
+<li class=notification-item data-month=03 data-category=Holiday>
+<a href=link3.html>Holi Holiday Declared on 8th March</a>
+<span class=notification-date>2025-03-07 05:00 PM</span>
+</li>
+<li class=notification-item data-month=04 data-category=Exam>
+<a href=link4.html>Assignment Submission Last Date</a>
+<span class=notification-date>2025-04-01 11:45 AM</span>
+</li>
+<li class=notification-item data-month=03 data-category=Event>
+<a href=link5.html>Workshop on AI & Web Dev</a>
+<span class=notification-date>2025-03-28 09:30 AM</span>
+</li>
+</ul>
+</div>
+<div class=controls>
+<button id=scrollUp>Down</button>
+<button id=scrollDown>Up</button>
+</div>
+</section>
+</section>
+<section class=sec2>
+<div class="container2 swiper">
+<p class=section-title>OUR DEPARTMENTS :</p>
+<div class=card-wrapper>
+<ul class="card-list swiper-wrapper">
+<li class="card-item swiper-slide">
+<a href=#department-science class=card-link>
+<img src=z3.jpg alt="Science Department" class=card-image>
+<p class="badge badge-department">Science</p>
+<h2 class=card-title>Explore Physics, Chemistry, Botany & Zoology</h2>
+<button class="card-button material-symbols-rounded">
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+</a>
+</li>
+<li class="card-item swiper-slide">
+<a href=#department-arts class=card-link>
+<img src=z3.jpg alt="Arts Department" class=card-image>
+<p class="badge badge-department">Arts</p>
+<h2 class=card-title>Courses in History, Political Science, Sociology </h2>
+<button class="card-button material-symbols-rounded">
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+</a>
+</li>
+<li class="card-item swiper-slide">
+<a href=#department-commerce class=card-link>
+<img src=z3.jpg alt="Commerce Department" class=card-image>
+<p class="badge badge-department">Commerce</p>
+<h2 class=card-title>Accounting, Business Studies & Financial Analysis</h2>
+<button class="card-button material-symbols-rounded">
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+</a>
+</li>
+<li class="card-item swiper-slide">
+<a href=#department-computers class=card-link>
+<img src=z3.jpg alt="Computer Applications" class=card-image>
+<p class="badge badge-department">Computer Science</p>
+<h2 class=card-title>Empowering through Programming & Technology</h2>
+<button class="card-button material-symbols-rounded">
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+</a>
+</li>
+<li class="card-item swiper-slide">
+<a href=#department-education class=card-link>
+<img src=z3.jpg alt="Education Department" class=card-image>
+<p class="badge badge-department">Education</p>
+<h2 class=card-title>Pedagogy, Curriculum Planning & Educational Psychology</h2>
+<button class="card-button material-symbols-rounded">
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+</a>
+</li>
+</ul>
+<div class=swiper-pagination2></div>
+<div class=card-swipe-btn>
+<div class="swiper-slide-button2 swiper-button-prev2">
+<i class="fa-solid fa-angle-left"></i>
+</div>
+<div class="swiper-slide-button2 swiper-button-next2">
+<i class="fa-solid fa-angle-right"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class=sec4>
+<h2 class=section-title>Through the Lens </h2>
+<div class=gallery>
+<div class=gallery-item><img src=z3.jpg alt=img4></div>
+<div class=gallery-item><img src=z3.jpg alt=img2></div>
+<div class=gallery-item><img src=z1.jpg alt=img3></div>
+<div class=gallery-item><img src=z3.jpg alt=img3></div>
+<div class=gallery-item><img src=z3.jpg alt=img4></div>
+</div>
+<div class=modal id=imageModal>
+<div class=modal-header>
+<button id=zoomIn><i class="fa-solid fa-magnifying-glass-plus"></i> </button>
+<button id=zoomOut><i class="fa-solid fa-magnifying-glass-minus"></i> </button>
+<button id=download><i class="fa-solid fa-download"></i> </button>
+<button id=closeModal><i class="fa-solid fa-xmark"></i> </button>
+</div>
+<div class=modal-content>
+<img id=modalImg src="" alt=preview>
+</div>
+</div>
+</section>
+<section class=sec5>
+<h2 class=section-title> Everything You Need</h2>
+<section class=accordion-section>
+<div class=accordion-item>
+<div class=accordion-header>About the College <span style=font-size:1.8rem>+</span></div>
+<div class=accordion-content>
+<a href=#>History</a>
+<a href=#>Vision & Mission</a>
+<a href=#>Principal's Message</a>
+</div>
+</div>
+<div class=accordion-item>
+<div class=accordion-header>Academics <span style=font-size:1.8rem>+</span></div>
+<div class=accordion-content>
+<a href=#>Courses Offered</a>
+<a href=#>Departments</a>
+<a href=#>Academic Calendar</a>
+</div>
+</div>
+<div class=accordion-item>
+<div class=accordion-header>Student Corner <span style=font-size:1.8rem>+</span></div>
+<div class=accordion-content>
+<a href=#>Time Tables</a>
+<a href=#>Exam Schedules</a>
+<a href=#>Results</a>
+</div>
+</div>
+<div class=accordion-item>
+<div class=accordion-header>Resources <span style=font-size:1.8rem>+</span></div>
+<div class=accordion-content>
+<a href=#>Library</a>
+<a href=#>Laboratories</a>
+<a href=#>E-Learning</a>
+</div>
+</div>
+</section>
+</section>
+<section class=footer>
+<div class=footer-row>
+<div class=footer-col>
+<h4>About</h4>
+<ul class=links>
+<li><a href=#>About the College</a></li>
+<li><a href=#>Principal's Message</a></li>
+<li><a href=#>Vision & Mission</a></li>
+<li><a href=#>Governing Body</a></li>
+<li><a href=#>Accreditation</a></li>
+</ul>
+</div>
+<div class=footer-col>
+<h4>Academics</h4>
+<ul class=links>
+<li><a href=#>Courses</a></li>
+<li><a href=#>Departments</a></li>
+<li><a href=#>Faculty</a></li>
+<li><a href=#>Academic Calendar</a></li>
+<li><a href=#>E-Learning</a></li>
+<li><a href=#>Library</a></li>
+</ul>
+</div>
+<div class=footer-col>
+<h4>Student Corner</h4>
+<ul class=links>
+<li><a href=#>Admissions</a></li>
+<li><a href=#>Exam Schedules</a></li>
+<li><a href=#>Results</a></li>
+<li><a href=#>Scholarships</a></li>
+<li><a href=#>Clubs & Societies</a></li>
+<li><a href=#>Events</a></li>
+</ul>
+</div>
+<div class=footer-col>
+<h4>Newsletter</h4>
+<p>
+Subscribe to our newsletter for campus updates, admission notices, and important announcements.
+</p>
+<form action=#>
+<input type=email placeholder="Your email" required>
+<button type=submit>SUBSCRIBE</button>
+</form>
+<div class=icons>
+<i class="fa-brands fa-facebook-f"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-brands fa-youtube"></i>
+</div>
+</div>
+</div>
+<div class=footer-bottom>
+<p>&copy; 2025 Amarsingh College. All rights reserved.</p>
+<p>Designed and Developed by <a href=https://irfanmanzoor.in style=color:#fff;font-weight:600>Irfan Manzoor</a></p>
+</div>
+</section>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js></script>
+<script src=script.js></script>
+</body>
+</html>

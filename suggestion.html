@@ -44,9 +44,10 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="suugestion.css">
     <script src="script.js" defer></script>
 
-    <title>AMARSINGH COLLEGE | ABOUT COLLGE</title>
+    <title>AMARSINGH COLLEGE | STUDENT SUGGESTIONS</title>
   </head>
   <body>
      <!-- LOADER -->
@@ -58,7 +59,6 @@
 
 
   <!-- HEADER NAVABAR -->
-
 
   <header id="nav-menu" aria-label="navigation bar">
     <div class="container">
@@ -196,56 +196,100 @@
     </div>
   </header>
       <!-- about  -->
-       <!-- About Section -->
-  <section class="about-container">
-    <div class="about-box">
-      <h2 class="blue-heading">About College</h2>
-      <p>
-        Amar Singh College (امر سنگھ کالج سرینگر, Kashmiri: اَمرسنگھ ژاٹٕھل سِرینگر) is an academic & professional college in Srinagar, Jammu and Kashmir, India. Established in November 1913, it is the second oldest college in the Kashmir Valley after Sri Pratap College. The College was recognized by University Grants Commission of India (UGC) in June 1972. The College is accredited by National Assessment and Accreditation Council [NAAC] with B++ Grade. The college is located in Wazir Bagh, in the city of Srinagar. It is spread over 35 hectares of land divided into a large play ground, parks, gardens, and an infrastructural area. At present, the college has multiple academic buildings making a total built-up area of about 30000 sqm. The college offers Undergraduate Honours Programs in 25 Majors including Commerce, Political Science, English, Sociology, Education, Zoology, Psychology, Economics, History, Computer Applications, Urdu, Tourism and Travel Management, Geography, Botany, EVS, Mass Communication, Islamic Studies, Chemistry, Mathematics, Physics, Arabic, Geology, Philosophy, Statistics, Kashmiri. The college also offers some courses as Minor only, like Bioresources, Functional English, Public Administration, Anthropology, Music and Persian. The college also offers Postgraduate programs in Economics, Geography and English
-      </p>
+       <!-- Histoy Section -->
+        
+  
+<!-- Hero Section -->
 
-      <div class="about-box principal-section">
-        <div class="principal-photo">
-          <img src="principal_ah.jpg" alt="Principal of Amar Singh College" />
-          <h3 id="princtpal-name">Prof. (Dr) Aijaz Ahmed Hakak</h3>
-          <p class="label">Our Principal</p>
-        </div>
-        <div class="principal-message">
-          <h2 class="blue-heading">Principal’s Message</h2>
-          <p>
-            Welcome to Amar Singh College – a hub of academic excellence, heritage, and progressive learning. 
-            We strive to shape the future of students by equipping them with quality education and life skills.
-          </p>
-        </div>
-      </div>
-      
-    </div>
 
-    <div class="about-box">
-      <h2 class="blue-heading">Vision & Mission</h2>
-      <p>
-        Our vision is to empower youth through holistic education, fostering innovation, discipline, and societal contribution. Our mission is to uphold academic standards, promote inclusivity, and cultivate leadership.
-      </p>
+  <!-- Info Block -->
+  <section class="light-section">
+    <div class="pre-container">
+      <h2 class="history-hero">Your Voice Matters</h2>
+     
     </div>
-
-    <div class="about-box">
-      <h2 class="blue-heading">Our Legacy</h2>
-       <p>
-    Founded over a century ago in <strong>1913</strong>, Amar Singh College stands as a beacon of knowledge and heritage in the Kashmir Valley. Named after Maharaja Amar Singh, the college was originally established as an intermediate college and has since evolved into a prestigious institution of higher learning.
-  </p>
-  <p>
-    With a legacy rooted in academic excellence, Amar Singh College is the <strong>second oldest college</strong> in the region and has contributed significantly to shaping the intellectual and cultural landscape of Jammu & Kashmir. It has nurtured generations of scholars, civil servants, educators, and professionals who have gone on to make meaningful contributions both nationally and internationally.
-  </p>
-  <p>
-    The college has not only withstood the test of time but has also thrived through decades of social, political, and educational transformations. Its commitment to inclusive, progressive, and holistic education remains steadfast.
-  </p>
-  <p>
-    From its historic colonial architecture to its modern academic initiatives, Amar Singh College symbolizes a harmonious blend of the past and future—a legacy that continues to inspire excellence, discipline, and intellectual curiosity.
-  </p>
-    </div>
-    
-  <!-- About section end -->
   </section>
+  <section class="inner-hero-section">
+    <div class="pre-container">
+      <h1 class="hero-title">Student Suggestions</h1>
+      <p class="hero-sub">Student Services / <span>Suggestions</span></p>
+    </div>
+  </section>
+
+  <!-- Suggestion Form Section -->
+  <section class="form-section">
+    <div class="aub-container form-flex">
+      <div class="form-card">
+        <h2 class="form-title">Submit Your Suggestion</h2>
+        <form id="suggestionForm" action="submit-suggestion.php" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">Full Name <span>*</span></label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="roll">Roll Number <span>*</span></label>
+            <input type="text" id="roll" name="roll" required />
+          </div>
+
+          <div class="form-group">
+            <label for="course">Course <span>*</span></label>
+            <input type="text" id="course" name="course" required />
+          </div>
+
+          <div class="form-group">
+            <label for="year">Year/Semester <span>*</span></label>
+            <select name="year" id="year" required>
+              <option value="">Select</option>
+              <option value="1st">1st Year</option>
+              <option value="2nd">2nd Year</option>
+              <option value="3rd">3rd Year</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category of Suggestion</label>
+            <select name="category" id="category">
+              <option value="general">General</option>
+              <option value="academic">Academic</option>
+              <option value="facility">College Facility</option>
+              <option value="services">Student Services</option>
+              <option value="website">Website / Online Services</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="type">Type of Feedback</label>
+            <select name="type" id="type">
+              <option value="suggestion">Suggestion</option>
+              <option value="complaint">Complaint</option>
+              <option value="appreciation">Appreciation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message <span>*</span></label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary2">Submit Feedback</button>
+        </form>
+      </div>
+
+      <div class="form-graphic">
+        <div class="gallery-item"><img src="z3.jpg" alt="img4" /></div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  <!-- ACCORDIAN -->
 
   <section class="accordion-section">
     <div class="accordion-item">
@@ -353,6 +397,20 @@
 
 <!-- ALL WRAPPPER DIV END -->
     </div>
+    <script>
+          document.getElementById("suggestionForm").addEventListener("submit", function (e) {
+      const name = document.getElementById("name").value.trim();
+      const roll = document.getElementById("roll").value.trim();
+      const course = document.getElementById("course").value.trim();
+      const year = document.getElementById("year").value;
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !roll || !course || !year || !message) {
+        alert("Please fill in all required fields.");
+        e.preventDefault();
+      }
+    });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>

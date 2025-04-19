@@ -2,17 +2,22 @@
 //loader
 
 const loadOut = document.querySelector("#loads");
+const paginhide =document.querySelector(".swiper-pagination");
 
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
      document.querySelector("body").style.visibility = "hidden";
      loadOut.style.visibility = "visible";
      document.body.style.overflowY = "hidden";
+     paginhide.style.display="none";
+
   } else {
      setTimeout(() => {
         loadOut.style.display ="none";
         document.querySelector("body").style.visibility = "visible";
         document.body.style.overflowY = "scroll";
+        paginhide.style.display="inherit";
+     
      }, 3000)
   }
 };
@@ -187,6 +192,69 @@ new Swiper('.card-wrapper', {
 
         item.classList.toggle('active');
       });
+    });
+
+
+     //Gallery Section
+
+     const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const zoomInBtn = document.getElementById('zoomIn');
+    const zoomOutBtn = document.getElementById('zoomOut');
+    const downloadBtn = document.getElementById('download');
+    const closeModal = document.getElementById('closeModal');
+
+    let scale = 1;
+    const maxScale = 3;
+    const minScale = 1;
+
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+        scale = 1;
+        modalImg.style.transform = `scale(${scale})`;
+      });
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    zoomInBtn.addEventListener('click', () => {
+      if (scale < maxScale) {
+        scale += 0.25;
+        modalImg.style.transform = `scale(${scale})`;
+      }
+    });
+
+    zoomOutBtn.addEventListener('click', () => {
+      if (scale > minScale) {
+        scale -= 0.25;
+        modalImg.style.transform = `scale(${scale})`;
+      }
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      const link = document.createElement('a');
+      link.href = modalImg.src;
+      link.download = 'image.jpg';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+
+    // Double tap zoom for touch
+    let lastTap = 0;
+    modalImg.addEventListener('touchend', (e) => {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+      if (tapLength < 300 && tapLength > 0) {
+        scale = (scale === 1) ? 2 : 1;
+        modalImg.style.transform = `scale(${scale})`;
+        e.preventDefault();
+      }
+      lastTap = currentTime;
     });
 
 
