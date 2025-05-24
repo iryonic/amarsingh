@@ -78,153 +78,54 @@
     <title>AMARSINGH COLLEGE</title>
 
     <style>
-      .cont-container {
-        width: 98%;
-        margin: 50px auto;
-        background: #fff;
-        border-radius: 6px;
-        padding: 20px 60px 30px 40px;
-        box-shadow: var(--shadow);
-      }
-      .cont-container .content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .cont-container .content .left-side {
-        width: 25%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-        position: relative;
-      }
-      .content .left-side::before {
-        content: "";
-        position: absolute;
-        height: 70%;
-        width: 2px;
-        right: -15px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: #afafb6;
-      }
-      .content .left-side .details {
-        margin: 14px;
-        text-align: center;
-      }
-      .content .left-side .details i {
-        font-size: 30px;
-        color: var(--primary-color);
-        margin-bottom: 10px;
-      }
-      .content .left-side .details .topic {
-        font-size: 18px;
-        font-weight: 500;
-      }
-      .content .left-side .details .text-one,
-      .content .left-side .details .text-two {
-        font-size: 14px;
-        color: #afafb6;
-      }
-      .cont-container .content .right-side {
-        width: 75%;
-        margin-left: 75px;
-      }
-      .con-para{
-        
-        margin: 15px 0;
-      }
-      .content .right-side .topic-text {
-        font-size: 23px;
-        font-weight: 600;
-        color: var(--primary-color);
-      }
-      .right-side .input-box {
-        height: 50px;
-        width: 100%;
-        margin: 12px 0;
-      }
-      .right-side .input-box input,
-      .right-side .input-box textarea {
-        height: 100%;
-        width: 100%;
-        border: none;
-        outline: none;
-        font-size: 16px;
-        background: #f0f1f8;
-        border-radius: 6px;
-        padding: 0 15px;
-        resize: none;
-      }
-      .right-side .message-box {
-        min-height: 110px;
-      }
-      .right-side .input-box textarea {
-        padding-top: 6px;
-      }
-      .right-side .button {
-        display: inline-block;
-        margin-top: 12px;
-      }
-      .right-side .button input[type="button"] {
-        color: #fff;
-        font-size: 18px;
-        outline: none;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 6px;
-        background: var(--primary-color);
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      .button input[type="button"]:hover {
-        border: 1px solid var(--primary-color);
-        background: #fff;
-        color: var(--primary-color);
-      }
-      .c-map{
-        width: 100%;
-        margin: 0 auto;
-        height: 400px;
-        margin-top: 50px;
-        border: 1px solid var(--primary-color);
-        border-radius: 6px;
-        box-shadow: var(--shadow);
-      }      @media (max-width: 950px) {
-        .cont-container {
-          width: 90%;
-          padding: 30px 40px 40px 35px;
-        }
-        .cont-container .content .right-side {
-          width: 75%;
-          margin-left: 55px;
-        }
-      }
-      @media (max-width: 820px) {
-        .cont-container {
-          height: 100%;
-        }
-        .cont-container .content {
-          flex-direction: column-reverse;
-        }
-        .cont-container .content .left-side {
-          width: 100%;
-          flex-direction: row;
-          margin-top: 40px;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        .con-container .content .left-side::before {
-          display: none;
-        }
-        .cont-container .content .right-side {
-          width: 100%;
-          margin-left: 0;
-        }
-      }
+      .a-container {
+      max-width: 98vw;
+      margin: auto;
+      padding: 0 1rem;
+    }
+
+    
+
+
+    .academics-overview {
+      padding: 3rem 1rem;
+      background: #f9f9ff;
+    }
+
+    .academics-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+    }
+
+    .academics-intro h2 {
+      font-size: 2rem;
+      color: #0066ff;
+      margin-bottom: 1rem;
+    }
+
+    .program-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .program-card {
+      background: white;
+      border-left: 4px solid #0066ff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    }
+
+    .program-card h3 {
+      margin-bottom: 0.6rem;
+      color: #0066ff;
+    }
+
+    
+  
+
     </style>
   </head>
   <body>
@@ -361,63 +262,305 @@
         </div>
       </header>
 
-      <!--  CONTACT FORM PAGE  -->
-      <section class="history-hero alt-hero">
-        <div class="hero-overlay">
-          <h1>CONTACT US</h1>
-          <p>Explore moments from our campus life and events</p>
-        </div>
-      </section>
+      <!--  ACADEMICS FORM PAGE  -->
+       <!-- -->
+  <section class="history-hero">
+    <div class="a-container">
+      <h1>Academics</h1>
+      <p>Explore academic excellence at Amar Singh College</p>
+    </div>
+  </section>
 
-      <div class="cont-container">
-        <div class="content">
-          <div class="left-side">
-            <div class="address details">
-              <i class="fas fa-map-marker-alt"></i>
-              <div class="topic">Address</div>
-              <div class="text-one">Gogji bagh</div>
-              <div class="text-two">Srinagar 190008</div>
-            </div>
-            <div class="phone details">
-              <i class="fas fa-phone-alt"></i>
-              <div class="topic">Phone</div>
-              <div class="text-one">600688848</div>
-              <div class="text-two">9906200029</div>
-            </div>
-            <div class="email details">
-              <i class="fas fa-envelope"></i>
-              <div class="topic">Email</div>
-              <div class="text-one">iry@gmail.com</div>
-              <div class="text-two">iryonline@gmail.com</div>
-            </div>
-          </div>
-          <div class="right-side">
-            <div class="topic-text">Send us a message</div>
-            <p class="con-para">
-              If you have any work from me or any types of quries related to my
-              tutorial, you can send me message from here. It's my pleasure to
-              help you.
-            </p>
-            <form action="#">
-              <div class="input-box">
-                <input type="text" placeholder="Enter your name" />
-              </div>
-              <div class="input-box">
-                <input type="text" placeholder="Enter your email" />
-              </div>
-              <div class="input-box message-box">
-                <input type="text" placeholder="Enter Message" />
-              </div>
-              <div class="button">
-                <input type="button" value="Send Now" />
-              </div>
-            </form>
-          </div>
-        </div>
+  <!-- Academic Programs Section -->
+  <section class="academics-overview">
+    <div class="a-container">
+      <div class="academics-intro">
+        <h2>Academic Programs</h2>
+        <p>We offer a broad array of undergraduate, postgraduate, and minor programs designed to equip students with essential knowledge, skills, and values for success in today's world.</p>
       </div>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.8074585200275!2d74.80596947551705!3d34.06044877315387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18fbecf0961ad%3A0x87dbe7d5b42a441d!2sAmar%20Singh%20College!5e1!3m2!1sen!2sin!4v1747985726382!5m2!1sen!2sin" class="c-map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-     
+      <div class="program-grid">
+        <div class="program-card">
+          <h3>Undergraduate Programs</h3>
+          <p>25+ Honours majors including Political Science, Psychology, Computer Applications, EVS, Mass Communication, and more.</p>
+        </div>
+        <div class="program-card">
+          <h3>Postgraduate Programs</h3>
+          <p>Programs in English, Geography, and Economics with a focus on advanced scholarship and research opportunities.</p>
+        </div>
+        <div class="program-card">
+          <h3>Minor Subjects</h3>
+          <p>Minors in areas like Anthropology, Functional English, Bioresources, Music, Persian, and Public Administration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Departments Section -->
+  <!-- SECTION 2 STARTS -->
+<section class="sec2">
+  <div class="container2 swiper">
+    <p class="section-title">OUR DEPARTMENTS :</p>
+
+    <div class="card-wrapper">
+      <!-- Card slides container -->
+      <ul class="card-list swiper-wrapper">
+
+       <!-- Arts & Humanities -->
+  <li class="card-item swiper-slide">
+    <a href="#department-english" class="card-link">
+      <img src="z3.jpg" alt="English" class="card-image">
+      <p class="badge badge-department">English</p>
+      <h2 class="card-title">Exploring Literature & Language Mastery</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-urdu" class="card-link">
+      <img src="z3.jpg" alt="Urdu" class="card-image">
+      <p class="badge badge-department">Urdu</p>
+      <h2 class="card-title">Celebrating the Grace of Urdu Literature</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-arabic" class="card-link">
+      <img src="z3.jpg" alt="Arabic" class="card-image">
+      <p class="badge badge-department">Arabic</p>
+      <h2 class="card-title">Language of Heritage & Knowledge</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-kashmiri" class="card-link">
+      <img src="z3.jpg" alt="Kashmiri" class="card-image">
+      <p class="badge badge-department">Kashmiri</p>
+      <h2 class="card-title">Preserving Our Linguistic Roots</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-islamic" class="card-link">
+      <img src="z3.jpg" alt="Islamic Studies" class="card-image">
+      <p class="badge badge-department">Islamic Studies</p>
+      <h2 class="card-title">Faith, Philosophy & Civilizational Growth</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <!-- Social Sciences -->
+  <li class="card-item swiper-slide">
+    <a href="#department-history" class="card-link">
+      <img src="z3.jpg" alt="History" class="card-image">
+      <p class="badge badge-department">History</p>
+      <h2 class="card-title">Understanding Civilization Through Time</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-political" class="card-link">
+      <img src="z3.jpg" alt="Political Science" class="card-image">
+      <p class="badge badge-department">Political Science</p>
+      <h2 class="card-title">Power, Policy & Governance Unveiled</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-education" class="card-link">
+      <img src="z3.jpg" alt="Education" class="card-image">
+      <p class="badge badge-department">Education</p>
+      <h2 class="card-title">Building Pedagogical Foundations</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-sociology" class="card-link">
+      <img src="z3.jpg" alt="Sociology" class="card-image">
+      <p class="badge badge-department">Sociology</p>
+      <h2 class="card-title">Understanding Society & Culture</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-philosophy" class="card-link">
+      <img src="z3.jpg" alt="Philosophy" class="card-image">
+      <p class="badge badge-department">Philosophy</p>
+      <h2 class="card-title">Exploring Logic, Ethics & Reality</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <!-- Economics & Commerce -->
+  <li class="card-item swiper-slide">
+    <a href="#department-economics" class="card-link">
+      <img src="z3.jpg" alt="Economics" class="card-image">
+      <p class="badge badge-department">Economics</p>
+      <h2 class="card-title">Studying Markets, Growth & Policy</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-commerce" class="card-link">
+      <img src="z3.jpg" alt="Commerce" class="card-image">
+      <p class="badge badge-department">Commerce</p>
+      <h2 class="card-title">Finance, Trade & Business Acumen</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <!-- Sciences -->
+  <li class="card-item swiper-slide">
+    <a href="#department-physics" class="card-link">
+      <img src="z3.jpg" alt="Physics" class="card-image">
+      <p class="badge badge-department">Physics</p>
+      <h2 class="card-title">Decoding Natural Laws & Forces</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-chemistry" class="card-link">
+      <img src="z3.jpg" alt="Chemistry" class="card-image">
+      <p class="badge badge-department">Chemistry</p>
+      <h2 class="card-title">Exploring Matter & Molecular Reactions</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-botany" class="card-link">
+      <img  src="z3.jpg" alt="Botany" class="card-image">
+      <p class="badge badge-department">Botany</p>
+      <h2 class="card-title">Plant Science & Environmental Study</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-zoology" class="card-link">
+      <img src="z3.jpg" alt="Zoology" class="card-image">
+      <p class="badge badge-department">Zoology</p>
+      <h2 class="card-title">Animal Biology & Biodiversity</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-evs" class="card-link">
+      <img src="z3.jpg"Environmental Science" class="card-image">
+      <p class="badge badge-department">EVS</p>
+      <h2 class="card-title">Sustainability & Environmental Awareness</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-maths" class="card-link">
+      <img src="z3.jpg" alt="Mathematics" class="card-image">
+      <p class="badge badge-department">Mathematics</p>
+      <h2 class="card-title">Numbers, Logic & Theoretical Precision</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-statistics" class="card-link">
+      <img src="z3.jpg" alt="Statistics" class="card-image">
+      <p class="badge badge-department">Statistics</p>
+      <h2 class="card-title">Interpreting Data, Trends & Probability</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <!-- Other Specialized Areas -->
+  <li class="card-item swiper-slide">
+    <a href="#department-geology" class="card-link">
+      <img src="z3.jpg" alt="Geology" class="card-image">
+      <p class="badge badge-department">Geology</p>
+      <h2 class="card-title">The Dynamic Earth & Natural Resources</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-geography" class="card-link">
+      <img src="z3.jpg" alt="Geography" class="card-image">
+      <p class="badge badge-department">Geography</p>
+      <h2 class="card-title">Studying the Earth & Spatial Systems</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-travel" class="card-link">
+      <img src="z3.jpg" alt="Tourism and Travel" class="card-image">
+      <p class="badge badge-department">Tourism & Travel</p>
+      <h2 class="card-title">Exploring Cultures, Promoting Hospitality</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+  <li class="card-item swiper-slide">
+    <a href="#department-masscomm" class="card-link">
+      <img src="z3.jpg" alt="Mass Communication" class="card-image">
+      <p class="badge badge-department">Mass Communication</p>
+      <h2 class="card-title">Media, Storytelling & Public Discourse</h2>
+      <button class="card-button"><i class="fa-solid fa-arrow-right"></i></button>
+    </a>
+  </li>
+
+      </ul>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination2"></div>
+
+      <!-- Navigation Buttons -->
+      <div class="card-swipe-btn">
+        <div class="swiper-slide-button2 swiper-button-prev2">
+          <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="swiper-slide-button2 swiper-button-next2">
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- seection 2 ends -->
+</section>
+
+  <!-- Academic Resources Section -->
+  <section class="academics-overview">
+    <div class="a-container">
+      <div class="academics-intro">
+        <h2>Academic Resources</h2>
+        <p>Students and faculty have access to rich resources including a digital library, dedicated research labs, smart classrooms, and online learning platforms.</p>
+      </div>
+      <div class="program-grid">
+        <div class="program-card">
+          <h3>Library & Digital Access</h3>
+          <p>Well-stocked library with thousands of volumes, e-journals, and academic databases accessible online.</p>
+        </div>
+        <div class="program-card">
+          <h3>Research & Innovation</h3>
+          <p>Faculty-led projects and student involvement in research are encouraged through mentorship and funding support.</p>
+        </div>
+        <div class="program-card">
+          <h3>Academic Calendar</h3>
+          <p>Structured schedules for sessions, exams, and holidays are provided to maintain academic discipline and planning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
       <!-- section 5 starts -->
 
