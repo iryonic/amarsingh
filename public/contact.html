@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta
+      name="description"
+      content="Amar Singh College is a leading institution offering undergraduate and postgraduate programs across Arts, Science, and Commerce. Explore our courses, admissions, and campus life."
+    />
+    <meta
+      name="keywords"
+      content="Amar Singh College, Srinagar College, Higher Education, UG PG Courses, Admissions, Departments, Campus, Academics, Government College"
+    />
+    <meta name="author" content="Amar Singh College" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (OG) Meta Tags for Social Sharing -->
+    <meta
+      property="og:title"
+      content="Amar Singh College | Premier Institute of Higher Education"
+    />
+    <meta
+      property="og:description"
+      content="Discover Amar Singh College - Explore departments, admissions, faculty, and campus life."
+    />
+    <meta
+      property="og:image"
+      content="https://ascollege.netlify.app/aslogo.png"
+    />
+    <meta property="og:url" content="https://ascollege.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Amar Singh College" />
+
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Amar Singh College | Premier Institute of Higher Education"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore top academic programs and vibrant student life at Amar Singh College."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourdomain.in/assets/images/og-image.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="aslogo.png" type="png" />
+    <link rel="apple-touch-icon" href="aslogo.png" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ascollege.netlify.app/" />
+
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+      <link rel="stylesheet" href="/CSS/style.css" />
+    <script src="/JS/script.js" defer></script>
+
+    <title>AMARSINGH COLLEGE</title>
+
+    <style>
+      .cont-container {
+        width: 98%;
+        margin: 50px auto;
+        background: #fff;
+        border-radius: 6px;
+        padding: 20px 60px 30px 40px;
+        box-shadow: var(--shadow);
+      }
+      .cont-container .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .cont-container .content .left-side {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        position: relative;
+      }
+      .content .left-side::before {
+        content: "";
+        position: absolute;
+        height: 70%;
+        width: 2px;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #afafb6;
+      }
+      .content .left-side .details {
+        margin: 14px;
+        text-align: center;
+      }
+      .content .left-side .details i {
+        font-size: 30px;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+      .content .left-side .details .topic {
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .content .left-side .details .text-one,
+      .content .left-side .details .text-two {
+        font-size: 14px;
+        color: #afafb6;
+      }
+      .cont-container .content .right-side {
+        width: 75%;
+        margin-left: 75px;
+      }
+      .con-para{
+        
+        margin: 15px 0;
+      }
+      .content .right-side .topic-text {
+        font-size: 23px;
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+      .right-side .input-box {
+        height: 50px;
+        width: 100%;
+        margin: 12px 0;
+      }
+      .right-side .input-box input,
+      .right-side .input-box textarea {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: #f0f1f8;
+        border-radius: 6px;
+        padding: 0 15px;
+        resize: none;
+      }
+      .right-side .message-box {
+        min-height: 110px;
+      }
+      .right-side .input-box textarea {
+        padding-top: 6px;
+      }
+      .right-side .button {
+        display: inline-block;
+        margin-top: 12px;
+      }
+      .right-side .button input[type="button"] {
+        color: #fff;
+        font-size: 18px;
+        outline: none;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        background: var(--primary-color);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .button input[type="button"]:hover {
+        border: 1px solid var(--primary-color);
+        background: #fff;
+        color: var(--primary-color);
+      }
+      .c-map{
+        width: 100%;
+        margin: 0 auto;
+        height: 400px;
+        margin-top: 50px;
+        border: 1px solid var(--primary-color);
+        border-radius: 6px;
+        box-shadow: var(--shadow);
+      }      @media (max-width: 950px) {
+        .cont-container {
+          width: 90%;
+          padding: 30px 40px 40px 35px;
+        }
+        .cont-container .content .right-side {
+          width: 75%;
+          margin-left: 55px;
+        }
+      }
+      @media (max-width: 820px) {
+        .cont-container {
+          height: 100%;
+        }
+        .cont-container .content {
+          flex-direction: column-reverse;
+        }
+        .cont-container .content .left-side {
+          width: 100%;
+          flex-direction: row;
+          margin-top: 40px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        .con-container .content .left-side::before {
+          display: none;
+        }
+        .cont-container .content .right-side {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- LOADER -->
+    <div id="loads"><span class="loader"></span></div>
+
+    <div class="whole-wrapper">
+      <!-- HEADER NAVABAR -->
+
+    <header id="nav-menu" aria-label="navigation bar">
+        <div class="container">
+          <div class="nav-start">
+            <a class="logo" href="/">
+              <img
+                src="/assets/aslogo.png"
+                class="logoimg"
+                width="135"
+                height="65"
+                alt="Inc Logo"
+              />
+            </a>
+            <nav class="menu">
+              <ul class="menu-bar">
+                <li><a class="nav-link" href="/">Home</a></li>
+               
+                <li>
+                  <button
+                    class="nav-link dropdown-btn"
+                    data-dropdown="dropdown1"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="browse"
+                  >
+                  About College
+                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="dropdown1" class="dropdown">
+                    <ul role="menu">
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="/public/about.html">
+                          <span class="dropdown-link-title"
+                            >About Us</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="/public/history.html">
+                          <span class="dropdown-link-title"
+                            >History</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="/public/events.html">
+                          <span class="dropdown-link-title"
+                            >Upcoming Events</span
+                          >
+                        </a>
+                      </li>
+                     
+                    </ul>
+                  </div>
+                </li>
+                <li><a class="nav-link" href="/public/academics.html">Academics</a></li>
+                <li>
+                  <button
+                    class="nav-link dropdown-btn"
+                    data-dropdown="dropdown2"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="discover"
+                  >
+                    Student Corner
+                    <i class="bx bx-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div id="dropdown2" class="dropdown">
+                    <ul role="menu">
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="/public/library.html">
+                          <span class="dropdown-link-title"
+                            >library</span
+                          
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="https://www.cusrinagar.edu.in/Result/ResultNotification?program=UG">
+                          <span class="dropdown-link-title"
+                            >UG-Results</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="https://www.cusrinagar.edu.in/Result/ResultNotification?Program=IH">
+                          <span class="dropdown-link-title"
+                            >IG-Results</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="/public/suggestion.html">
+                          <span class="dropdown-link-title"
+                            >suggestion</span
+                          >
+                        </a>
+                      </li>
+                      <li role="menuitem">
+                        <a class="dropdown-link" href="https://www.cusrinagar.edu.in/Account/StudentZone">
+                          <span class="dropdown-link-title"
+                            >Student login</span
+                          >
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li><a class="nav-link" href="/public/gallery.html">Gallery</a></li>
+                <li><a class="nav-link" href="/public/contact.html">Contact</a></li>
+
+              </ul>
+            </nav>
+          </div>
+
+          <div class="nav-end">
+            <div class="right-container">
+              <a href="#profile" class="useravt">
+              
+                <i class="fa-solid fa-user " ></i>
+              </a>
+              <button class="btn btn-primary">Admin</button>
+            </div>
+
+            <button
+              id="hamburger"
+              aria-label="hamburger"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="bx bx-menu" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!--  CONTACT FORM PAGE  -->
+      <section class="history-hero alt-hero">
+        <div class="hero-overlay">
+          <h1>CONTACT US</h1>
+          <p>Explore moments from our campus life and events</p>
+        </div>
+      </section>
+
+      <div class="cont-container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">Gogji bagh</div>
+              <div class="text-two">Srinagar 190008</div>
+            </div>
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">600688848</div>
+              <div class="text-two">9906200029</div>
+            </div>
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">iry@gmail.com</div>
+              <div class="text-two">iryonline@gmail.com</div>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="topic-text">Send us a message</div>
+            <p class="con-para">
+              If you have any work from me or any types of quries related to my
+              tutorial, you can send me message from here. It's my pleasure to
+              help you.
+            </p>
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Enter your email" />
+              </div>
+              <div class="input-box message-box">
+                <input type="text" placeholder="Enter Message" />
+              </div>
+              <div class="button">
+                <input type="button" value="Send Now" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3141.8074585200275!2d74.80596947551705!3d34.06044877315387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18fbecf0961ad%3A0x87dbe7d5b42a441d!2sAmar%20Singh%20College!5e1!3m2!1sen!2sin!4v1747985726382!5m2!1sen!2sin" class="c-map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     
+
+      <!-- section 5 starts -->
+
+      <section class="sec5">
+        <h2 class="section-title">Everything You Need</h2>
+
+        <section class="accordion-section">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              About the College <span style="font-size: 1.8rem">+</span>
+            </div>
+            <div class="accordion-content">
+              <a href="history.html">History</a>
+              <a href="about.html">Vision & Mission</a>
+              <a href="events.html">Upcoming Events</a>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              Academics <span style="font-size: 1.8rem">+</span>
+            </div>
+            <div class="accordion-content">
+              <a href="#">Courses Offered</a>
+              <a href="#">Departments</a>
+              <a href="#">Academic Calendar</a>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              Student Corner <span style="font-size: 1.8rem">+</span>
+            </div>
+            <div class="accordion-content">
+              <a href="#">Time Tables</a>
+              <a href="#">Exam Schedules</a>
+              <a href="#">Results</a>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="accordion-header">
+              Resources <span style="font-size: 1.8rem">+</span>
+            </div>
+            <div class="accordion-content">
+              <a href="#">Library</a>
+              <a href="#">Laboratories</a>
+              <a href="#">E-Learning</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- section 5 ends -->
+      </section>
+
+      <!-- FOOTER -->
+      <section class="footer">
+        <div class="footer-row">
+          <div class="footer-col">
+            <h4>About</h4>
+            <ul class="links">
+              <li><a href="history.html">About the College</a></li>
+              <li><a href="about.html">Principal's Message</a></li>
+              <li><a href="events.html">Upcoming Events</a></li>
+              <li><a href="#">Governing Body</a></li>
+              <li><a href="#">Accreditation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Academics</h4>
+            <ul class="links">
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Departments</a></li>
+              <li><a href="#">Faculty</a></li>
+              <li><a href="#">Academic Calendar</a></li>
+              <li><a href="#">E-Learning</a></li>
+              <li><a href="#">Library</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Student Corner</h4>
+            <ul class="links">
+              <li><a href="#">Admissions</a></li>
+              <li><a href="#">Exam Schedules</a></li>
+              <li><a href="#">Results</a></li>
+              <li><a href="#">Scholarships</a></li>
+              <li><a href="#">Clubs & Societies</a></li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Newsletter</h4>
+            <p>
+              Subscribe to our newsletter for campus updates, admission notices,
+              and important announcements.
+            </p>
+            <form action="#">
+              <input type="email" placeholder="Your email" required />
+              <button type="submit">SUBSCRIBE</button>
+            </form>
+            <div class="icons">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Amarsingh College. All rights reserved.</p>
+          <p>
+            Designed and Developed by
+            <a
+              href="https://irfanmanzoor.in"
+              style="color: #fff; font-weight: 600"
+              >Irfan Manzoor</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- ALL WRAPPPER DIV END -->
+    </div>
+    <script>
+      //notification
+      const list = document.getElementById("notificationList");
+      const items = Array.from(list.children);
+      const scrollUp = document.getElementById("scrollUp");
+      const scrollDown = document.getElementById("scrollDown");
+      const monthFilter = document.getElementById("monthFilter");
+      const categoryFilter = document.getElementById("categoryFilter");
+      const searchInput = document.getElementById("searchInput");
+
+      let scrollInterval;
+      let topIndex = 0;
+
+      function getFilteredItems() {
+        const month = monthFilter.value;
+        const category = categoryFilter.value.toLowerCase();
+        const keyword = searchInput.value.toLowerCase();
+
+        return items.filter((item) => {
+          const itemMonth = item.getAttribute("data-month");
+          const itemCategory = item.getAttribute("data-category").toLowerCase();
+          const text = item.innerText.toLowerCase();
+
+          return (
+            (month === "" || itemMonth === month) &&
+            (category === "" || itemCategory === category) &&
+            (keyword === "" || text.includes(keyword))
+          );
+        });
+      }
+
+      function renderList() {
+        const filtered = getFilteredItems();
+        list.innerHTML = "";
+        filtered.forEach((item) => list.appendChild(item.cloneNode(true)));
+      }
+
+      function autoScroll() {
+        clearInterval(scrollInterval);
+        scrollInterval = setInterval(() => {
+          const total = list.children.length;
+          if (topIndex < total - 1) topIndex++;
+          else topIndex = 0;
+
+          const topEl = list.children[topIndex];
+          list.style.transition = "transform 0.6s ease-in-out";
+          list.style.transform = `translateY(-${topEl.offsetTop}px)`;
+        }, 2000);
+      }
+
+      function manualScroll(direction) {
+        clearInterval(scrollInterval);
+        const total = list.children.length;
+        if (direction === "up" && topIndex > 0) topIndex--;
+        if (direction === "down" && topIndex < total - 1) topIndex++;
+
+        const topEl = list.children[topIndex];
+        list.style.transition = "transform 0.5s ease-in-out";
+        list.style.transform = `translateY(-${topEl.offsetTop}px)`;
+
+        setTimeout(autoScroll, 2000);
+      }
+
+      scrollUp.addEventListener("click", () => manualScroll("up"));
+      scrollDown.addEventListener("click", () => manualScroll("down"));
+
+      [monthFilter, categoryFilter, searchInput].forEach((input) =>
+        input.addEventListener("input", () => {
+          topIndex = 0;
+          renderList();
+        })
+      );
+
+      renderList();
+      autoScroll();
+
+      //Gallery Section
+
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      const zoomInBtn = document.getElementById("zoomIn");
+      const zoomOutBtn = document.getElementById("zoomOut");
+      const downloadBtn = document.getElementById("download");
+      const closeModal = document.getElementById("closeModal");
+
+      let scale = 1;
+      const maxScale = 3;
+      const minScale = 1;
+
+      document.querySelectorAll(".gallery-item img").forEach((img) => {
+        img.addEventListener("click", () => {
+          modal.style.display = "flex";
+          modalImg.src = img.src;
+          scale = 1;
+          modalImg.style.transform = `scale(${scale})`;
+        });
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      zoomInBtn.addEventListener("click", () => {
+        if (scale < maxScale) {
+          scale += 0.25;
+          modalImg.style.transform = `scale(${scale})`;
+        }
+      });
+
+      zoomOutBtn.addEventListener("click", () => {
+        if (scale > minScale) {
+          scale -= 0.25;
+          modalImg.style.transform = `scale(${scale})`;
+        }
+      });
+
+      downloadBtn.addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.href = modalImg.src;
+        link.download = "image.jpg";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+
+      // Double tap zoom for touch
+      let lastTap = 0;
+      modalImg.addEventListener("touchend", (e) => {
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+        if (tapLength < 300 && tapLength > 0) {
+          scale = scale === 1 ? 2 : 1;
+          modalImg.style.transform = `scale(${scale})`;
+          e.preventDefault();
+        }
+        lastTap = currentTime;
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
