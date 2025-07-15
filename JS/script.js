@@ -8,7 +8,7 @@ const paginhide =document.querySelector(".swiper-pagination");
 document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
      document.querySelector("body").style.visibility = "hidden";
-     loadOut.style.visibility = "visible";
+     loadOut.style.display = "flex";
      document.body.style.overflowY = "hidden";
      paginhide.style.display="none";
 
