@@ -19,9 +19,11 @@ document.onreadystatechange = function () {
         document.body.style.overflowY = "scroll";
         paginhide.style.display="inherit";
      
-     }, 3000)
+     }, 1000)
   }
 };
+
+
 
 // footer year
 const currentYear = document.getElementById("currentYear");
