@@ -579,9 +579,9 @@ const list = document.getElementById("notificationList");
         else topIndex = 0;
 
         const topEl = list.children[topIndex];
-        list.style.transition = "transform 0.6s ease-in-out";
+        list.style.transition = "transform 0.5s ease-in-out";
         list.style.transform = `translateY(-${topEl.offsetTop}px)`;
-      }, 2000);
+      }, 1000);
     }
 
     function manualScroll(direction) {
@@ -591,10 +591,10 @@ const list = document.getElementById("notificationList");
       if (direction === "down" && topIndex < total - 1) topIndex++;
 
       const topEl = list.children[topIndex];
-      list.style.transition = "transform 0.5s ease-in-out";
+      list.style.transition = "transform 0.3s ease-in-out";
       list.style.transform = `translateY(-${topEl.offsetTop}px)`;
 
-      setTimeout(autoScroll, 2000);
+      setTimeout(autoScroll, 1000);
     }
 
     scrollUp.addEventListener("click", () => manualScroll("up"));
@@ -610,6 +610,19 @@ const list = document.getElementById("notificationList");
     renderList();
     autoScroll();
 
+
+    // add new mark on new notifications
+    const newNotification = document.createElement("li");
+    newNotification.className = "notification-item";
+    newNotification.innerHTML = `
+      <a href="link6.html">New Semester Starts on 1st May</a>
+      <span class="notification-date">2025-04-30 09:00 AM</span>
+    `;
+    list.appendChild(newNotification);
+    newNotification.setAttribute("data-month", "04");
+    newNotification.setAttribute("data-category", "Event");
+    // Add the new notification to the list
+    renderList();
 
      //Gallery Section
 

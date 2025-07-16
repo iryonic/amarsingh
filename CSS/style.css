@@ -1072,6 +1072,7 @@ ul.notification-list {
 .principal-photo {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
   padding: 10px;
+  background-color: var(--primary-color);
  
   text-align: center;
 }
@@ -1089,12 +1090,12 @@ ul.notification-list {
   margin: 0.5rem 0 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #222;
+  color: #ffffff;
 }
 
 .principal-photo .label {
   font-size: 0.9rem;
-  color: #666;
+  color: #f3f2f2;
 }
 
 .principal-message {
@@ -1915,6 +1916,11 @@ ul.notification-list {
         .cont-container .content .right-side {
           width: 100%;
           margin-left: 0;
+        }
+
+        .data-paragraph {
+          font-size: 0.9rem;
+          line-height: 1.4;
         }
  
 }
