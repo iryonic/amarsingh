@@ -231,21 +231,29 @@
           <p>Explore moments from our campus life and events</p>
         </div>
       </section>
+      
+ <div class="filters1">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="Campus">Campus</button>
+            <button class="filter-btn" data-category="Events">Events</button>
+            <button class="filter-btn" data-category="Sports">Sports</button>
 
-      <div class="images">
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-        <img src="/assets/z3.jpg" alt="img of amarsingh moments" />
-      </div>
+        </div>
+        
+        <div class="gallery" id="gallery">
+            <!-- Gallery items will be added by JavaScript -->
+        </div>
+        
+        <div class="pagination" id="pagination">
+            <!-- Pagination buttons will be added by JavaScript -->
+        </div>
+        
+        <div class="footer-pagination">
+            Showing <span id="showing-start">1</span>-<span id="showing-end">12</span> of <span id="total-count">144</span> images
+        </div>
+    </div>
+    
+
 
 
 
@@ -383,13 +391,212 @@
     </div>
 
     <script>
+        
+        // Gallery data with base64 encoded placeholder images
+        const galleryData = [
+            { 
+                title: "Miami", 
+                category: "Campus", 
+                image: "/assets/asc4.jpg",
+            },
+            { 
+                title: "Mountain Sunset", 
+                category: "Events", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Modern Campus", 
+                category: "Campus", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Street Portrait", 
+                category: "People", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Color Splash", 
+                category: "Sports", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Forest Path", 
+                category: "Events", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Vintage Building", 
+                category: "Campus", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Finnate Together", 
+                category: "People", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Geometric Art", 
+                category: "Sports", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Ocean Waves", 
+                category: "Events", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Urban Tower", 
+                category: "Campus", 
+                image: "/assets/asc4.jpg"
+            },
+            { 
+                title: "Childhood Joy", 
+                category: "People", 
+                image: "/assets/asc4.jpg"
+            }
+        ];
+
+        // Generate more items to reach 144
+        const allCategories = ["Campus", "People", "Sports", "Events"];
+        for (let i = 13; i <= 50; i++) {
+            const randomCat = allCategories[Math.floor(Math.random() * allCategories.length)];
+            galleryData.push({
+                title: `Image ${i}`,
+                category: randomCat,
+                image: `/assets/z3.jpg`
+            });
+        }
+
+        // Pagination variables
+        const itemsPerPage = 12;
+        let currentPage = 1;
+        let currentCategory = "all";
+
+        // Function to create gallery items
+        function createGallery(items) {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+            
+            items.forEach(item => {
+                const galleryItem = document.createElement('div');
+                galleryItem.className = 'gallery-item';
+                
+                galleryItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" class="gallery-image">
+                    <div class="gallery-info">
+                        <h3 class="gallery-title">${item.title}</h3>
+                        <p class="gallery-category">${item.category}</p>
+                    </div>
+                `;
+                
+                gallery.appendChild(galleryItem);
+            });
+        }
+
+        // Function to update pagination
+        function updatePagination(totalItems) {
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            
+            // Previous button
+            if (currentPage > 1) {
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'page-btn';
+                prevBtn.textContent = 'Previous';
+                prevBtn.addEventListener('click', () => {
+                    currentPage--;
+                    filterAndPaginate();
+                });
+                pagination.appendChild(prevBtn);
+            }
+            
+            // Page buttons
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                pageBtn.textContent = i;
+                pageBtn.addEventListener('click', () => {
+                    currentPage = i;
+                    filterAndPaginate();
+                });
+                pagination.appendChild(pageBtn);
+            }
+            
+            // Next button
+            if (currentPage < totalPages) {
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'page-btn';
+                nextBtn.textContent = 'Next';
+                nextBtn.addEventListener('click', () => {
+                    currentPage++;
+                    filterAndPaginate();
+                });
+                pagination.appendChild(nextBtn);
+            }
+        }
+
+        // Function to filter and paginate
+        function filterAndPaginate() {
+            // Filter by category
+            let filteredItems;
+            if (currentCategory === "all") {
+                filteredItems = galleryData;
+            } else {
+                filteredItems = galleryData.filter(item => item.category === currentCategory);
+            }
+            
+            // Paginate
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const paginatedItems = filteredItems.slice(startIndex, endIndex);
+            
+            // Update gallery
+            createGallery(paginatedItems);
+            
+            // Update pagination
+            updatePagination(filteredItems.length);
+            
+            // Update showing text
+            document.getElementById('showing-start').textContent = startIndex + 1;
+            document.getElementById('showing-end').textContent = Math.min(endIndex, filteredItems.length);
+            document.getElementById('total-count').textContent = filteredItems.length;
+        }
+
+        // Initialize filter buttons
+        function initFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Update current category and reset to page 1
+                    currentCategory = button.dataset.category;
+                    currentPage = 1;
+                    
+                    // Filter and paginate
+                    filterAndPaginate();
+                });
+            });
+        }
+
+        // Initialize gallery when page loads
+        window.onload = function() { 
+            initFilters();
+            filterAndPaginate();
+        };
+
         document.addEventListener("DOMContentLoaded", () => {
             const modal = document.getElementById("imgModal");
             const modalImg = document.getElementById("modalImg");
             const downloadLink = document.getElementById("downloadImg");
             let scale = 1;
           
-            document.querySelectorAll(".images img").forEach((img) => {
+            document.querySelectorAll(".gallery-item img").forEach((img) => {
               img.style.cursor = "pointer";
               img.addEventListener("click", () => {
                 modal.style.display = "block";
