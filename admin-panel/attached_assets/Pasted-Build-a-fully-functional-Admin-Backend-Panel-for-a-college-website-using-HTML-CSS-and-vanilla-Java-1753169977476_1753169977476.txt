@@ -1,0 +1,107 @@
+Build a fully functional Admin Backend Panel for a college website using HTML, CSS, and vanilla JavaScript only (no frameworks). The admin panel should have a modern, responsive dashboard UI and allow the admin to manage all major website content efficiently.
+
+✅ Key Functional Modules:
+📊 Dashboard (Landing Page of Admin Panel)
+Show statistics:
+
+Total Faculty
+
+Total Departments
+
+Total Events
+
+Total Notifications
+
+Total Gallery Images
+
+Total Student Messages
+
+Include modern card layout and optional small chart visuals (pure CSS/JS)
+
+📁 Sidebar Navigation
+Sticky vertical sidebar (collapsible) with icons
+
+Links to:
+
+Dashboard
+
+Manage Notifications
+
+Manage Events
+
+Manage Faculty
+
+Manage Gallery
+
+Manage Departments
+
+View Student Suggestions
+
+Manage Landing Page Content
+
+Settings
+
+✏️ Functional Pages (CRUD UI with Modern Design)
+🔔 Notifications
+Add/Edit/Delete notifications (title, message, date)
+
+📅 Events
+Manage events (title, description, image, date)
+
+👨‍🏫 Faculty
+CRUD faculty (name, department, photo, bio)
+
+🖼️ Gallery
+Upload/delete images with preview
+
+🏢 Departments
+Add/Edit/Delete department (name, HOD, description)
+
+💬 Student Suggestions
+View student submissions:
+
+Name, Email, Message, Date
+
+Mark as resolved/delete
+
+🏠 Manage Landing Page Content
+CRUD for homepage sections:
+
+Hero section text & image
+
+About section content
+
+Vision & Mission
+
+Achievements
+
+Contact info & footer
+
+WYSIWYG (rich text editing) simulation using contenteditable or styled textarea
+
+Preview changes before saving
+
+🌟 UI/UX Expectations
+Clean, modern dashboard design
+
+Responsive for desktop & mobile
+
+Sidebar with hover effects, icons
+
+Smooth transitions & modals
+
+Cards, tables, and forms styled consistently
+
+Dark/Light mode toggle (optional)
+
+Use localStorage or JS objects to simulate data persistence
+
+⚙️ Technical Requirements
+Use HTML5, CSS3, and pure JavaScript
+
+No external frameworks like React, jQuery, or Bootstrap
+
+Create modular components for reusability
+
+Add dummy data to simulate real use
+

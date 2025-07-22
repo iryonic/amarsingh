@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admin Panel</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/modals.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-feather="book-open"></i>
+                    <span class="logo-text">College Admin</span>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item active" data-page="dashboard">
+                        <a href="#" class="nav-link">
+                            <i data-feather="home"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-page="notifications">
+                        <a href="#" class="nav-link">
+                            <i data-feather="bell"></i>
+                            <span class="nav-text">Notifications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-page="events">
+                        <a href="#" class="nav-link">
+                            <i data-feather="calendar"></i>
+                            <span class="nav-text">Events</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-page="faculty">
+                        <a href="#" class="nav-link">
+                            <i data-feather="users"></i>
+                            <span class="nav-text">Faculty</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-page="gallery">
+                        <a href="#" class="nav-link">
+                            <i data-feather="image"></i>
+                            <span class="nav-text">Gallery</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-page="departments">
+                        <a href="#" class="nav-link">
+                            <i data-feather="home"></i>
+                            <span class="nav-text">Departments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-page="suggestions">
+                        <a href="#" class="nav-link">
+                            <i data-feather="message-circle"></i>
+                            <span class="nav-text">Student Suggestions</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-page="landing-page">
+                        <a href="#" class="nav-link">
+                            <i data-feather="layout"></i>
+                            <span class="nav-text">Landing Page</span>
+                        </a>
+                    </li>
+                    <li class="nav-item" data-page="settings">
+                        <a href="#" class="nav-link">
+                            <i data-feather="settings"></i>
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Sidebar Overlay for Mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <button class="mobile-sidebar-toggle" id="mobileSidebarToggle">
+                        <i data-feather="menu"></i>
+                    </button>
+                    <h1 class="page-title" id="pageTitle">Dashboard</h1>
+                </div>
+                <div class="topbar-right">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i data-feather="moon"></i>
+                    </button>
+                    <div class="user-info">
+                        <span class="user-name">Admin</span>
+                        <div class="user-avatar">
+                            <i data-feather="user"></i>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-area" id="contentArea">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Modal Title</h3>
+                <button class="modal-close" id="modalClose">
+                    <i data-feather="x"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/faculty.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/departments.js"></script>
+    <script src="js/suggestions.js"></script>
+    <script src="js/landing-page.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
