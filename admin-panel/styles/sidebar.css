@@ -35,7 +35,7 @@
     /* Reset collapsed state on mobile */
     .sidebar-collapsed .sidebar {
         width: 280px;
-        /* transform: translateX(-100%); */
+        transform: translateX(-100%);
     }
     
     .sidebar-collapsed .sidebar.show {
